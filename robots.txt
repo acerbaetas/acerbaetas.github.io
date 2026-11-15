@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acerbaetas.it/sitemap.xml
