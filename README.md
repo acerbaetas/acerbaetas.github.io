@@ -1,7 +1,7 @@
 
-# Acerba Aetas
+# Acerba Etas
 
-**Acerba Aetas** is a Digital Humanities project dedicated to the transcription, study, and digital edition of three medieval manuscripts of *L'Acerba*, the unfinished didactic poem by Cecco d'Ascoli (Francesco Stabili, c. 1269–1327).
+**Acerba Etas** is a Digital Humanities project dedicated to the transcription, study, and digital edition of three medieval manuscripts of *L'Acerba*, the unfinished didactic poem by Cecco d'Ascoli (Francesco Stabili, c. 1269–1327).
 
 ## The Project
 
