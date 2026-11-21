@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2026-08-04T17:56:39.807+02:00</Created>
+        <LastChange>2026-11-15T19:41:03.979+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="20184262_0009_130761739.jpg" imageWidth="2776" imageHeight="3432">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1795259628003" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_2"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_2" custom="readingOrder {index:0;}">
+            <Coords points="435,253 441,2787 1759,2787 1826,253"/>
+            <TextLine id="tr_2_tl_2" custom="readingOrder {index:0;}">
+                <Coords points="510,422 1617,394 1710,441 1821,404 1821,325 1024,337 831,302 510,373"/>
+                <Baseline points="519,402 1826,384"/>
+                <TextEquiv>
+                    <Unicode>Capitulum quartum de obscuritate solis et lune</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_3" custom="readingOrder {index:1;}">
+                <Coords points="562,469 1295,477 1297,401 562,412"/>
+                <Baseline points="572,456 1301,447"/>
+                <TextEquiv>
+                    <Unicode>et de maculis ipsius lune</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_4" custom="readingOrder {index:2;} differentReading {offset:17; length:3;}">
+                <Coords points="723,530 1501,540 1527,469 724,473"/>
+                <Baseline points="731,528 1530,519"/>
+                <TextEquiv>
+                    <Unicode>Cessa intellecto cum le rote velle</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_5" custom="readingOrder {index:3;}">
+                <Coords points="716,603 1704,590 1704,530 716,536"/>
+                <Baseline points="725,587 1707,581"/>
+                <TextEquiv>
+                    <Unicode>Cha tua vertu non basta vedere luce</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_6" custom="readingOrder {index:4;}">
+                <Coords points="705,665 1686,679 1678,592 706,608"/>
+                <Baseline points="716,653 1692,647"/>
+                <TextEquiv>
+                    <Unicode>De quel che te convene d essere fidele</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_8" custom="readingOrder {index:5;}">
+                <Coords points="543,737 1238,726 1238,690 1159,706 974,659 543,682"/>
+                <Baseline points="552,722 1241,719"/>
+                <TextEquiv>
+                    <Unicode>Unde perfecto deo fa e natura</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_11" custom="readingOrder {index:6;}">
+                <Coords points="492,798 1367,800 1393,736 1261,726 1161,764 1104,734 1002,768 921,724 494,732"/>
+                <Baseline points="501,784 1396,781"/>
+                <TextEquiv>
+                    <Unicode>Universal che sempre spera e luce</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_13" custom="readingOrder {index:7;}">
+                <Coords points="482,858 1401,858 1401,800 1234,782 981,835 904,795 482,790"/>
+                <Baseline points="492,847 1405,844"/>
+                <TextEquiv>
+                    <Unicode>Chun acto di potentia trafigura</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_14" custom="readingOrder {index:8;}">
+                <Coords points="486,940 1359,914 1359,865 486,875"/>
+                <Baseline points="495,919 1363,904"/>
+                <TextEquiv>
+                    <Unicode>Intelligentie stelle moto e lumino</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_16" custom="readingOrder {index:9;}">
+                <Coords points="481,984 1341,983 1360,912 961,961 839,917 654,945 481,924"/>
+                <Baseline points="489,975 1363,966"/>
+                <TextEquiv>
+                    <Unicode>Onne natura che la spera manta</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_18" custom="readingOrder {index:10;}">
+                <Coords points="486,1050 1297,1046 1269,1009 952,1027 804,984 486,986"/>
+                <Baseline points="495,1038 1301,1032"/>
+                <TextEquiv>
+                    <Unicode>Mantegnon e de ço l esser sume</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_20" custom="readingOrder {index:11;}">
+                <Coords points="486,1113 1498,1107 1498,1046 878,1092 793,1037 486,1050"/>
+                <Baseline points="495,1095 1501,1101"/>
+                <TextEquiv>
+                    <Unicode>Se non fosse conne animal che vive</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_21" custom="readingOrder {index:12;}">
+                <Coords points="489,1171 1329,1176 1329,1123 1290,1110 490,1112"/>
+                <Baseline points="498,1166 1331,1166"/>
+                <TextEquiv>
+                    <Unicode>E de ciascuna vegetabel planta</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_23" custom="readingOrder {index:13;}">
+                <Coords points="487,1248 1481,1246 1481,1174 1336,1218 1223,1216 1177,1176 489,1176"/>
+                <Baseline points="498,1232 1486,1226"/>
+                <TextEquiv>
+                    <Unicode>Seriam de lor virtute morte e prive</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_25" custom="readingOrder {index:14;}">
+                <Coords points="446,1310 1303,1313 1368,1301 1370,1270 448,1236"/>
+                <Baseline points="456,1304 1372,1292"/>
+                <TextEquiv>
+                    <Unicode>S ai ochi nostri apare nova forma</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_27" custom="readingOrder {index:15;}">
+                <Coords points="477,1388 1592,1368 1575,1308 1298,1308 1226,1349 1131,1301 477,1311"/>
+                <Baseline points="486,1369 1596,1357"/>
+                <TextEquiv>
+                    <Unicode>Lo humano ingegno alor se mova e quera</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_29" custom="readingOrder {index:16;}">
+                <Coords points="492,1467 541,1434 1252,1447 1436,1411 1406,1364 968,1396 495,1377"/>
+                <Baseline points="501,1438 1600,1427"/>
+                <TextEquiv>
+                    <Unicode>Fin che de luy el vero se ponga l orma</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_30" custom="readingOrder {index:17;}">
+                <Coords points="489,1507 1251,1498 1391,1535 1504,1499 1506,1436 540,1436 490,1467"/>
+                <Baseline points="498,1501 1520,1502"/>
+                <TextEquiv>
+                    <Unicode>Ma no transceda e levi l alto ingeno</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_31" custom="readingOrder {index:18;}">
+                <Coords points="489,1570 1272,1568 1272,1501 489,1519"/>
+                <Baseline points="498,1563 1274,1548"/>
+                <TextEquiv>
+                    <Unicode>Sopra le stelle si che de lo pero</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_32" custom="readingOrder {index:19;} differentReading {offset:28; length:5;}">
+                <Coords points="495,1635 1404,1632 1386,1558 497,1573"/>
+                <Baseline points="504,1629 1408,1617"/>
+                <TextEquiv>
+                    <Unicode>Che de cotal luce no mostra segno</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_33" custom="readingOrder {index:20;}">
+                <Coords points="441,1717 492,1692 1216,1702 1215,1627 538,1650 441,1622"/>
+                <Baseline points="450,1689 1220,1680"/>
+                <TextEquiv>
+                    <Unicode>O viste del miracoloso afanno</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_34" custom="readingOrder {index:21;} differentReading {offset:0; length:8;} differentReading {offset:11; length:7;}">
+                <Coords points="486,1767 1498,1769 1485,1694 486,1694"/>
+                <Baseline points="495,1757 1501,1751"/>
+                <TextEquiv>
+                    <Unicode>Chun voi s include sempre miraviglia</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_36" custom="readingOrder {index:22;} differentReading {offset:17; length:9;}">
+                <Coords points="477,1836 1395,1830 1375,1769 1225,1810 1156,1764 477,1767"/>
+                <Baseline points="486,1823 1399,1814"/>
+                <TextEquiv>
+                    <Unicode>Del poco cerchio la stella miranno</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_37" custom="readingOrder {index:23;}">
+                <Coords points="474,1898 1416,1895 1416,1839 1380,1831 474,1839"/>
+                <Baseline points="483,1883 1420,1883"/>
+                <TextEquiv>
+                    <Unicode>Non e virtu non dubitare al mondo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_38" custom="readingOrder {index:24;}">
+                <Coords points="486,1957 1426,1962 1427,1897 487,1903"/>
+                <Baseline points="495,1951 1429,1948"/>
+                <TextEquiv>
+                    <Unicode>Ma fare de l ombra humana semeia</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_39" custom="readingOrder {index:25;}">
+                <Coords points="500,2040 1431,2029 1404,1964 500,1965"/>
+                <Baseline points="510,2017 1435,2011"/>
+                <TextEquiv>
+                    <Unicode>Rasone non vede como sia l secondo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_40" custom="readingOrder {index:26;}">
+                <Coords points="432,2101 1373,2096 1393,2034 433,2024"/>
+                <Baseline points="441,2083 1396,2080"/>
+                <TextEquiv>
+                    <Unicode>Dico che umbra de stella humana</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_41" custom="readingOrder {index:27;}">
+                <Coords points="495,2161 1419,2160 1419,2086 495,2101"/>
+                <Baseline points="504,2151 1423,2145"/>
+                <TextEquiv>
+                    <Unicode>Si fa el terrestro asisso in quela parte</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_42" custom="readingOrder {index:28;}">
+                <Coords points="495,2227 1386,2225 1370,2158 495,2181"/>
+                <Baseline points="504,2214 1390,2208"/>
+                <TextEquiv>
+                    <Unicode>Ch a nostra qualita non e luntana</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_43" custom="readingOrder {index:29;}">
+                <Coords points="513,2296 1315,2289 1315,2222 513,2224"/>
+                <Baseline points="522,2283 1319,2277"/>
+                <TextEquiv>
+                    <Unicode>Per bello raço no la priva l sole</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_44" custom="readingOrder {index:30;}">
+                <Coords points="504,2372 1020,2343 1359,2361 1372,2294 504,2302"/>
+                <Baseline points="513,2351 1375,2339"/>
+                <TextEquiv>
+                    <Unicode>Perche ne desposta como marte</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_45" custom="readingOrder {index:31;}">
+                <Coords points="489,2431 1535,2431 1537,2361 490,2361"/>
+                <Baseline points="498,2417 1539,2408"/>
+                <TextEquiv>
+                    <Unicode>Che con li soi ragi el foco mostrar vole</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_46" custom="readingOrder {index:32;}">
+                <Coords points="427,2510 620,2485 1238,2497 1239,2428 558,2435 428,2395"/>
+                <Baseline points="435,2491 1244,2474"/>
+                <TextEquiv>
+                    <Unicode>De questa stella se cela beleça</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_47" custom="readingOrder {index:33;}">
+                <Coords points="481,2565 1321,2547 1321,2498 1283,2480 481,2492"/>
+                <Baseline points="489,2551 1325,2533"/>
+                <TextEquiv>
+                    <Unicode>De li aquistati raci si chun noy</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_48" custom="readingOrder {index:34;}">
+                <Coords points="500,2634 1337,2623 1319,2546 500,2560"/>
+                <Baseline points="510,2617 1342,2605"/>
+                <TextEquiv>
+                    <Unicode>Par che natura perda sua vageça</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_2_tl_49" custom="readingOrder {index:35;} differentReading {offset:26; length:5;}">
+                <Coords points="466,2709 711,2722 924,2678 1131,2686 1220,2727 1364,2709 1349,2619 468,2627"/>
+                <Baseline points="477,2682 1369,2670"/>
+                <TextEquiv>
+                    <Unicode>De ço che vive la virtute germe</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>

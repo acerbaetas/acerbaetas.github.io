@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd">
+    <Metadata>
+        <Creator>Transkribus Processing API</Creator>
+        <Created>2026-08-04T17:56:51.550+02:00</Created>
+        <LastChange>2026-11-19T20:31:52.791+01:00</LastChange>
+    </Metadata>
+    <Page imageFilename="20184262_0016_130761784.jpg" imageWidth="2760" imageHeight="3516">
+        <ReadingOrder>
+            <OrderedGroup id="ro_1795259628108" caption="Regions reading order">
+                <RegionRefIndexed index="0" regionRef="tr_1"/>
+            </OrderedGroup>
+        </ReadingOrder>
+        <TextRegion orientation="0.0" id="tr_1" custom="readingOrder {index:0;}">
+            <Coords points="850,379 850,3072 2137,3072 2137,379"/>
+            <TextLine id="tr_1_tl_3" custom="readingOrder {index:0;}">
+                <Coords points="1013,414 1231,450 1846,451 1845,378 1751,420 1468,429 1012,381"/>
+                <Baseline points="947,433 1850,432"/>
+                <TextEquiv>
+                    <Unicode>Tanto piu sente le tempete prave</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_5" custom="readingOrder {index:1;}">
+                <Coords points="945,494 1820,506 1819,448 1571,490 944,440"/>
+                <Baseline points="952,477 1823,495"/>
+                <TextEquiv>
+                    <Unicode>De le gliaçate pietre ciascum lito</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_6" custom="readingOrder {index:2;}">
+                <Coords points="909,557 1791,583 1831,578 1831,518 908,487"/>
+                <Baseline points="916,546 1835,561"/>
+                <TextEquiv>
+                    <Unicode>Ma qui po dubitare l anima gentile</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_9" custom="readingOrder {index:3;}">
+                <Coords points="966,631 1893,656 1859,573 1767,570 1700,618 1391,560 966,606"/>
+                <Baseline points="973,617 1895,626"/>
+                <TextEquiv>
+                    <Unicode>Nel tempo caldo com se forma l gliaço</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_13" custom="readingOrder {index:4;}">
+                <Coords points="936,687 1712,694 1689,641 1588,683 1265,672 1163,626 936,627"/>
+                <Baseline points="943,680 1716,689"/>
+                <TextEquiv>
+                    <Unicode>E privasse nel so tempo simile</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_16" custom="readingOrder {index:5;}">
+                <Coords points="951,756 1889,774 1889,698 1557,746 1492,706 1443,744 1172,738 1095,694 951,740"/>
+                <Baseline points="958,749 1892,755"/>
+                <TextEquiv>
+                    <Unicode>La spera che ten lo foco in sua virtute</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_19" custom="readingOrder {index:6;}">
+                <Coords points="924,822 1778,832 1778,781 1705,768 1463,769 1381,810 1229,755 1087,804 924,780"/>
+                <Baseline points="931,814 1781,814"/>
+                <TextEquiv>
+                    <Unicode>Dico che fuga l fredo col so braço</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_21" custom="readingOrder {index:7;}">
+                <Coords points="999,890 1734,908 1747,835 1334,818 998,858"/>
+                <Baseline points="955,876 1752,883"/>
+                <TextEquiv>
+                    <Unicode>E tenlo in unita con so ferute</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_23" custom="readingOrder {index:8;}">
+                <Coords points="983,955 1581,956 1581,903 1421,885 1291,895 1211,935 1188,918 983,930"/>
+                <Baseline points="898,940 1584,946"/>
+                <TextEquiv>
+                    <Unicode>Cosi di fuoco li raçi reflexi</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_26" custom="readingOrder {index:9;}">
+                <Coords points="1188,992 1272,990 1340,1028 1426,1034 1782,1033 1797,955 1684,952 1647,976 1600,952 1406,959 1375,987 1304,991 1242,955 1185,963"/>
+                <Baseline points="924,1011 1802,1014"/>
+                <TextEquiv>
+                    <Unicode>Inverso l ayre de la nostra terra</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_29" custom="readingOrder {index:10;} differentReading {offset:15; length:7;} uncertain {offset:23; length:7;}">
+                <Coords points="963,1078 1729,1096 1727,1027 1691,1022 1505,1065 1342,1063 1287,1017 1152,1060 1074,1017 963,1022"/>
+                <Baseline points="970,1062 1731,1077"/>
+                <TextEquiv>
+                    <Unicode>Per l oreçonte essendo conessi</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_32" custom="readingOrder {index:11;}">
+                <Coords points="977,1152 1814,1156 1814,1095 1570,1091 1471,1131 1122,1106 977,1133"/>
+                <Baseline points="984,1143 1817,1143"/>
+                <TextEquiv>
+                    <Unicode>E quando reçe l cancro e po leone</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_34" custom="readingOrder {index:12;}">
+                <Coords points="939,1218 1717,1229 1732,1156 1369,1148 1208,1194 1060,1142 937,1161"/>
+                <Baseline points="946,1202 1737,1208"/>
+                <TextEquiv>
+                    <Unicode>Assa piu fredo ne lo meço seria</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_35" custom="readingOrder {index:13;}">
+                <Coords points="950,1285 1731,1287 1730,1229 1698,1216 1111,1213 1084,1236 949,1214"/>
+                <Baseline points="955,1262 1734,1271"/>
+                <TextEquiv>
+                    <Unicode>Pero el glaço plove la staxone</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_37" custom="readingOrder {index:14;}">
+                <Coords points="942,1331 1788,1354 1786,1288 1466,1326 1344,1270 1158,1298 1094,1266 941,1280"/>
+                <Baseline points="949,1328 1790,1340"/>
+                <TextEquiv>
+                    <Unicode>In questo tempo sono frede l aque</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_39" custom="readingOrder {index:15;}">
+                <Coords points="936,1410 1533,1428 1638,1399 1781,1427 1781,1358 1751,1355 1331,1344 1199,1388 936,1344"/>
+                <Baseline points="943,1390 1784,1402"/>
+                <TextEquiv>
+                    <Unicode>Che soto terra vegnon per le vene</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:16;} differentReading {offset:37; length:5;}">
+                <Coords points="913,1464 1866,1497 1906,1430 1642,1402 1468,1458 1399,1411 1242,1404 1059,1451 911,1437"/>
+                <Baseline points="919,1459 1910,1471"/>
+                <TextEquiv>
+                    <Unicode>Che l caldo spense l fredo che n lor taque</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_44" custom="readingOrder {index:17;} differentReading {offset:8; length:5;}">
+                <Coords points="934,1524 1748,1541 1748,1483 1577,1498 1158,1469 1115,1510 934,1502"/>
+                <Baseline points="940,1516 1752,1528"/>
+                <TextEquiv>
+                    <Unicode>E calde senno nel gelato tempo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_47" custom="readingOrder {index:18;}">
+                <Coords points="913,1618 1115,1590 1393,1626 1441,1601 1779,1617 1757,1534 1605,1541 1548,1582 1401,1533 1089,1535 913,1576"/>
+                <Baseline points="918,1598 1781,1596"/>
+                <TextEquiv>
+                    <Unicode>Perche el calor sub terra se tene</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_50" custom="readingOrder {index:19;} differentReading {offset:25; length:4;}">
+                <Coords points="946,1667 1797,1694 1829,1679 1828,1616 1431,1605 1215,1649 945,1648"/>
+                <Baseline points="952,1656 1832,1665"/>
+                <TextEquiv>
+                    <Unicode>E questo dura fine che l celo a tempo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_51" custom="readingOrder {index:20;}">
+                <Coords points="843,1747 1110,1722 1688,1753 1766,1741 1766,1679 1106,1684 842,1649"/>
+                <Baseline points="850,1731 1769,1728"/>
+                <TextEquiv>
+                    <Unicode>Ma quanto scorpione rece e po pesse</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_52" custom="readingOrder {index:21;}">
+                <Coords points="939,1789 1707,1823 1818,1802 1817,1748 937,1726"/>
+                <Baseline points="946,1787 1820,1793"/>
+                <TextEquiv>
+                    <Unicode>Questo meço ayre quasi temperato</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_53" custom="readingOrder {index:22;}">
+                <Coords points="955,1872 1786,1887 1815,1879 1815,1818 954,1796"/>
+                <Baseline points="961,1853 1817,1862"/>
+                <TextEquiv>
+                    <Unicode>Pero se n lui qualche vapore cresse</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_54" custom="readingOrder {index:23;}">
+                <Coords points="936,1927 1695,1944 1679,1874 936,1876"/>
+                <Baseline points="943,1922 1698,1922"/>
+                <TextEquiv>
+                    <Unicode>Nasce la neve con aque quiete</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_56" custom="readingOrder {index:24;} uncertain {offset:22; length:6;} differentReading {offset:29; length:3;} uncertain {offset:29; length:3;}">
+                <Coords points="945,2008 1695,2006 1681,1939 1600,1934 1539,1978 1461,1982 1331,1927 944,1928"/>
+                <Baseline points="952,1984 1698,1996"/>
+                <TextEquiv>
+                    <Unicode>Per l uno contrario e prvato che</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_60" custom="readingOrder {index:25;}">
+                <Coords points="936,2057 1741,2075 1741,2011 1608,2052 1399,2048 1314,2000 1231,2047 936,2016"/>
+                <Baseline points="943,2050 1743,2059"/>
+                <TextEquiv>
+                    <Unicode>Che faça fredo forte con so mete</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_61" custom="readingOrder {index:26;}">
+                <Coords points="889,2140 931,2110 993,2138 1307,2119 1683,2144 1657,2073 1102,2078 888,2046"/>
+                <Baseline points="895,2107 1686,2122"/>
+                <TextEquiv>
+                    <Unicode>Pluvia move potentia de luna</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_62" custom="readingOrder {index:27;}">
+                <Coords points="930,2194 1781,2208 1757,2141 929,2118"/>
+                <Baseline points="937,2181 1784,2193"/>
+                <TextEquiv>
+                    <Unicode>Se con le prave stelle seque l moto</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_64" custom="readingOrder {index:28;} uncertain {offset:2; length:5;} differentReading {offset:2; length:5;}">
+                <Coords points="924,2259 1809,2283 1808,2210 1402,2197 1291,2242 1198,2202 923,2195"/>
+                <Baseline points="931,2241 1811,2259"/>
+                <TextEquiv>
+                    <Unicode>D acosi tempi mostrando fortuna</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_65" custom="readingOrder {index:29;}">
+                <Coords points="929,2316 1703,2347 1680,2267 1065,2277 928,2253"/>
+                <Baseline points="934,2304 1704,2319"/>
+                <TextEquiv>
+                    <Unicode>Maligno corpo inforca sua luce</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_66" custom="readingOrder {index:30;}">
+                <Coords points="939,2411 1107,2381 1753,2417 1752,2337 937,2318"/>
+                <Baseline points="946,2369 1755,2381"/>
+                <TextEquiv>
+                    <Unicode>Verso la luna fin che no e remoto</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_67" custom="readingOrder {index:31;}">
+                <Coords points="936,2439 1074,2469 1731,2469 1730,2408 1107,2385 936,2409"/>
+                <Baseline points="943,2432 1734,2456"/>
+                <TextEquiv>
+                    <Unicode>Tempesta move e aque conduce</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_68" custom="readingOrder {index:32;}">
+                <Coords points="847,2536 935,2505 1716,2542 1769,2525 1768,2461 1073,2469 844,2427"/>
+                <Baseline points="853,2492 1772,2522"/>
+                <TextEquiv>
+                    <Unicode>Quando se move con le dolce stelle</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_69" custom="readingOrder {index:33;}">
+                <Coords points="918,2604 954,2580 1013,2608 1084,2583 1698,2609 1696,2535 916,2509"/>
+                <Baseline points="925,2572 1701,2587"/>
+                <TextEquiv>
+                    <Unicode>Fuga le nube si che luce l mundo</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_70" custom="readingOrder {index:34;}">
+                <Coords points="942,2654 1921,2677 1920,2611 1823,2598 1009,2608 941,2575"/>
+                <Baseline points="949,2644 1922,2665"/>
+                <TextEquiv>
+                    <Unicode>Per qual clareça l anime se fanno belle</Unicode>
+                </TextEquiv>
+            </TextLine>
+            <TextLine id="tr_1_tl_71" custom="readingOrder {index:35;}">
+                <Coords points="916,2728 1371,2757 1504,2724 1642,2764 1865,2742 1864,2673 915,2672"/>
+                <Baseline points="922,2710 1868,2728"/>
+                <TextEquiv>
+                    <Unicode>Quando la luna sta in benignitate.</Unicode>
+                </TextEquiv>
+            </TextLine>
+        </TextRegion>
+    </Page>
+</PcGts>
