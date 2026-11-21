@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b3c">
+  <title>I codici dell'Acerba | Acerba Etas</title>
+  <meta name="description" content="I codici dell'Acerba di Cecco d'Ascoli: mappa delle biblioteche, datazione, digitalizzazioni e schede descrittive disponibili online.">
+  <link rel="canonical" href="https://acerbaetas.it/codici.html">
+
+  <!-- Stesse risorse grafiche della homepage -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- Leaflet: libreria per la mappa interattiva -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style/style-pages.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="scripts/codici.js" defer></script>
+  <script src="scripts/navbar.js" defer></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container codici-page">
+    <div class="page-intro text-center">
+      <h1>I codici dell’<em>Acerba</em></h1>
+
+      <p class="method-note">
+        Il presente elenco raccoglie una selezione di codici dell’<em>Acerba</em> di Cecco d’Ascoli
+        per i quali sono state individuate risorse digitali consultabili online, quali riproduzioni
+        digitalizzate e schede catalografiche. <br>
+        <b>Nota:</b> L'elenco nasce dal censimento pubblicato nel 1916 da Pasquale Rosario e non costituisce un repertorio esaustivo dei testimoni conservati dell’opera.
+      </p>
+    </div>
+
+    <section class="codici-map-section" aria-label="Mappa delle biblioteche che conservano i codici">
+      <p class="map-instructions">Seleziona una biblioteca sulla mappa per vedere i codici che conserva.</p>
+      <div id="mappa-codici" class="codici-map" role="region"
+           aria-label="Mappa interattiva delle biblioteche dei codici dell'Acerba"></div>
+      <p id="stato-mappa" class="load-status" role="status">Caricamento della mappa…</p>
+    </section>
+
+    <section aria-label="Elenco dei codici" id="tabella-codici">
+      <p id="stato-codici" class="load-status" role="status">Caricamento dei codici…</p>
+      <table class="table codici-table">
+        <caption class="visually-hidden">Codici dell'Acerba con datazione, biblioteca di conservazione e collegamento alla risorsa online.</caption>
+        <colgroup>
+          <col class="col-nome">
+          <col class="col-datazione">
+          <col class="col-biblioteca">
+          <col class="col-link">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Datazione</th>
+            <th scope="col">Biblioteca</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody id="elenco-codici">
+          <!-- Le righe vengono generate da codici.js con i dati del file JSON. -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</body>
+</html>
