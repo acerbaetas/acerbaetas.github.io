@@ -9,7 +9,7 @@ The project aims to make the manuscript tradition of *L'Acerba* more accessible 
 
 ## Project Website
 
-https://acerbaetas.github.io/
+https://acerbaetas.it/
 
 The website is currently under development.
 
