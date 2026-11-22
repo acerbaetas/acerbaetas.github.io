@@ -29,6 +29,9 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
   <link rel="stylesheet" href="style/style-index.css">
+
+  <link rel="stylesheet" href="style/style-components.css">
+  <script src="scripts/components.js" defer></script>
 </head>
 <body class="d-flex flex-column">
   <main class="container flex-grow-1 d-flex align-items-center justify-content-center">
@@ -38,13 +41,89 @@
              alt="Miniatura medievale con cielo blu stellato, sole dorato e luna crescente">
 
         <h1 class="mb-0"><em>Acerba Etas</em></h1>
-        <p class="subtitle">Edizione digitale dell'<i>Acerba</i> di Cecco d'Ascoli</p>
+        <p class="subtitle">
+          Edizione digitale dell'<i>Acerba</i><span class="subtitle-author"> di Cecco d'Ascoli</span>
+        </p>
 
-        <section class="announcement" aria-label="Annuncio della pubblicazione">
-          <div class="coming-soon-banner">
-            <p class="coming-soon mb-0">Esplora</p>
-          </div>
+        <section class="announcement" aria-label="Accesso all'edizione digitale">
+          <a href="acerba.html" class="landing-button">
+            Esplora l'Acerba
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
         </section>
+
+                  
+        <!-- Percorsi di esplorazione -->
+        <section class="discovery-section" aria-label="Esplora il progetto">
+
+          <div class="row g-4">
+
+            <!-- Codici -->
+            <div class="col-12 col-lg-4">
+              <article class="discovery-card">
+
+                <h2 class="discovery-title">
+                  X codici
+                </h2>
+
+                <p class="discovery-description">
+                 I codici dell'<i>Acerba</i>, oggi conservati nelle biblioteche di tutto il mondo, testimoniano la diffusione del poema e la ricchezza della sua tradizione testuale attraverso i secoli.
+                </p>
+
+                <a href="codici.html" class="landing-button">
+                  Consulta i codici
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+
+              </article>
+            </div>
+
+            <!-- Storia -->
+            <div class="col-12 col-lg-4">
+              <article class="discovery-card">
+
+                <h2 class="discovery-title">
+                  1327 &middot; 1927 &middot; 2027
+                </h2>
+
+                <p class="discovery-description">
+                  A settecento anni dalla morte di Cecco d'Ascoli
+                  e a un secolo dall'edizione di Achille Crespi,
+                  l'<i>Acerba</i> torna a vivere attraverso una
+                  nuova edizione digitale.
+                </p>
+
+                <button class="landing-button" type="button" disabled>Leggi la storia
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </button>
+
+              </article>
+            </div>
+
+            <!-- Progetto -->
+            <div class="col-12 col-lg-4">
+              <article class="discovery-card">
+
+                <h2 class="discovery-title">
+                  "Costruito in una notte con l'aiuto del diavolo"
+                </h2>
+
+                <p class="discovery-description">
+                  Un progetto che unisce filologia e tecnologie digitali per rendere l'<i>Acerba</i> accessibile attraverso nuovi strumenti di ricerca.
+                </p>
+
+                <button class="landing-button" type="button" disabled>
+                  Scopri il progetto
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </button>
+
+              </article>
+            </div>
+
+          </div>
+
+        </section>
+
 
         <section class="quote-section text-center">
 
@@ -64,36 +143,18 @@
         </section>
 
 
-        <p class="project-description">
+        <!--<p class="project-description">
             <i>Acerba Etas</i> è un progetto di edizione digitale dell'<i>Acerba</i> di Cecco d'Ascoli, poema enciclopedico del XIV secolo. Attraverso la trascrizione e il confronto di tre manoscritti medievali con l'edizione critica di Achille Crespi (1927), il progetto intende valorizzare la
             tradizione testuale dell'opera e offrire nuovi strumenti per esplorarne i contenuti. Collegamenti ipertestuali, percorsi tematici e strumenti di analisi permetteranno di scoprire l'universo scientifico, letterario e culturale dell'<i>Acerba</i>, rendendolo accessibile
             anche a un pubblico non specialista.
-          </p>
+          </p>-->
 
-
-        
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <p class="footer-label">Un progetto di</p>
-    <p class="footer-names">
-      <a href="https://fabiomariani.github.io/" target="_blank" rel="noopener noreferrer">Fabio Mariani</a>
-      ·
-      <a href="https://frauparma.com/" target="_blank" rel="noopener noreferrer">Michela Parma</a>
-    </p>
+  
+<div id="footer-container"></div>
 
-    <a class="footer-github"
-      href="https://github.com/acerbadigitale/acerba-edizione"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Repository GitHub di Acerba Digitale">
-      <i class="bi bi-github" aria-hidden="true"></i>
-      GitHub Repository
-    </a>
-
-    <p class="footer-copyright">© 2026 Acerba Etas</p>
-  </footer>
 </body>
 </html>

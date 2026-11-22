@@ -65,6 +65,9 @@
         padding: 0 0.5rem;
         line-height: 1.7;
       }
+      .subtitle-author {
+        display: block;
+      }
     }
 
     .acerba-quote {
@@ -106,24 +109,9 @@
       font-style: italic;
     }
 
-    .announcement { margin-top: clamp(3rem, 8vh, 5rem); }
-    .coming-soon-banner {
-      background-color: var(--gold);
-      width: 100%;
-      padding: 1.25rem 1rem;
-      margin: 4rem 0;
-      text-align: center;
-      width: 100vw;
-margin-left: calc(50% - 50vw);
-    }
-
-    .coming-soon {
-      color: var(--night);
-      font-family: "DM Sans", sans-serif;
-      font-size: clamp(0.85rem, 1.5vw, 1rem);
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
+    
+    .announcement {
+      margin-top: clamp(3rem, 8vh, 5rem);
     }
     .tagline {
       margin: .9rem 0 0;
@@ -243,5 +231,186 @@ margin-left: calc(50% - 50vw);
       h1 em, h1 span { display: block; }
       .subtitle { max-width: 21rem; }
       .announcement { margin-top: 3.25rem; }
-      .coming-soon { letter-spacing: .16em; }
     }
+
+
+
+
+    
+/* ==========================================
+   LANDING BUTTONS
+   ========================================== */
+
+.landing-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  width: auto;
+  max-width: 100%;
+  padding: 0.9rem 1.8rem;
+
+  background-color: var(--gold);
+  color: var(--night);
+
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover */
+
+.landing-button:hover:not(:disabled) {
+  background-color: #eac44d;
+  color: var(--night);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus */
+
+.landing-button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Disabled */
+
+.landing-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   DISCOVERY SECTION
+   ========================================== */
+
+.discovery-section {
+  width: 100%;
+  margin: 4rem auto 5rem;
+}
+
+/* Cards */
+
+.discovery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  padding: 2.5rem 2rem;
+
+  background-color: #152249;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+
+  color: var(--night);
+  text-align: center;
+}
+
+/* Titles */
+
+.discovery-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+/* Descriptions */
+
+.discovery-description {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--muted);
+
+  margin-bottom: 2rem;
+}
+
+/* Keep buttons aligned at the bottom */
+
+.discovery-card .landing-button {
+  margin-top: auto;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 767.98px) {
+
+  .discovery-section {
+    margin: 3rem auto 4rem;
+  }
+
+  .discovery-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .discovery-title {
+    font-size: 1.9rem;
+  }
+
+  .discovery-description {
+    font-size: 0.9rem;
+  }
+
+  .landing-button {
+    padding: 0.85rem 1.4rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
+/* ==========================================
+   THREE-COLUMN DISCOVERY LAYOUT
+   ========================================== */
+
+@media (min-width: 992px) {
+
+  .discovery-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .discovery-title {
+    font-size: clamp(1.65rem, 2.2vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+
+  .discovery-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .discovery-card .landing-button {
+    padding: 0.85rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+}
