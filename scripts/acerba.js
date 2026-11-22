@@ -234,17 +234,17 @@
           const divider = el("div","page-break",`Foglio ${label}`); divider.dataset.pageId = line.page;
           panel.body.append(divider); lastPage = line.page;
         }
-        const label = i ? "" : block.kind === "header" ? "§" : block.status === "aligned" ? block.matches.map(numberOf).join(" / ") : "·";
+        const matched = ["aligned","uncertain"].includes(block.status);
+        const label = i ? "" : block.kind === "header" ? "§" : matched ? block.matches.map(numberOf).join(" / ") : "·";
         const row = el("div",`verse-row ${block.kind === "header" ? "paratesto" : ""}`);
         row.dataset.pageId = line.page;
-        if (block.status === "uncertain") { row.classList.add("alignment-uncertain"); row.title = "Corrispondenza incerta"; }
         row.append(el("span","verse-number",label),annotated(line));
-        selectable(row,block.id,panel);
-        if (block.status === "aligned") for (const ref of block.matches.slice(1)) {
+        selectable(row,matched ? block.matches[0] : block.id,panel);
+        if (matched) for (const ref of [...new Set([block.id,...block.matches])].filter(ref=>ref!==row.dataset.ref)) {
           panel.refs.add(ref);
           if (!panel.rows.has(ref)) panel.rows.set(ref,[]);
           panel.rows.get(ref).push(row);
-          if (i === 0) row.append(button(`Seleziona verso ${numberOf(ref)}`,String(numberOf(ref)),event => {
+          if (i === 0 && block.matches.includes(ref)) row.append(button(`Seleziona verso ${numberOf(ref)}`,String(numberOf(ref)),event => {
             event.stopPropagation(); navigate(ref);
           },"btn btn-sm verse-reference"));
         }
@@ -509,7 +509,7 @@
     const inputs=[...$("panel-options").querySelectorAll("input")]; const selected=inputs.filter(i=>i.checked).length;
     const remaining=5-state.p.length-selected;
     inputs.forEach(i=>{i.disabled=i.dataset.open==="true" || (!i.checked && remaining===0);});
-    $("confirm-add").disabled=!selected; $("add-status").textContent=`${remaining} posti disponibili`;
+    $("confirm-add").disabled=!selected;
   }
 
   try {

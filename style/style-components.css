@@ -51,9 +51,6 @@
   color: var(--gold);
 }
 
-.site-navbar .future-link {
-  cursor: default;
-}
 
 .site-navbar .navbar-toggler {
   border: 1px solid rgba(248, 246, 242, .6);

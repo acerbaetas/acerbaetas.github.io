@@ -57,7 +57,6 @@
 .acerba-page .verse-row.fallback { background: #e7e9ed; border-color: #aab2bd; color: #667080; }
 .acerba-page .fallback-label { display: block; font: .8rem/1.4 Arial,sans-serif; color: #536074; }
 .acerba-page .verse-row:has(.fallback-label) { flex-wrap: wrap; }
-.acerba-page .alignment-uncertain { border-left: 2px dotted #9a8144; }
 .acerba-page .paratesto { color: #58677a; font-style: italic; }
 .acerba-page .page-break { display: flex; align-items: center; gap: .6rem; color: #6b7785; font-size: .8rem; margin: 1rem 0; }
 .acerba-page .page-break::before, .acerba-page .page-break::after { content: ''; border-top: 1px solid #d9dde2; flex: 1; }

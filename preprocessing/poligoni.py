@@ -47,6 +47,15 @@ def normalize_folder(folder):
         def replace_line(match):
             nonlocal count
             line = match[0]
+            # Rimuove soltanto gli spazi esterni al testo, riallineando gli offset PAGE.
+            unicode = re.search(br'<(?:\w+:)?Unicode\b[^>]*>(.*?)</(?:\w+:)?Unicode\s*>', line, re.S)
+            if unicode:
+                value = unicode[1].decode('utf-8')
+                leading = len(value) - len(value.lstrip())
+                line = line[:unicode.start(1)] + value.strip().encode('utf-8') + line[unicode.end(1):]
+                if leading:
+                    line = re.sub(br'\boffset\s*:\s*(\d+)',
+                                  lambda m: b'offset:'+str(max(0, int(m[1])-leading)).encode(), line)
             coords = re.search(br'<(?:\w+:)?Coords\b[^>]*\bpoints=([\x22\x27])(.*?)\1', line)
             base = re.search(br'<(?:\w+:)?Baseline\b[^>]*\bpoints=([\x22\x27])(.*?)\1', line)
             if not coords or not base:
@@ -59,7 +68,7 @@ def normalize_folder(folder):
             count += 1
             return line[:coords.start(2)]+value+line[coords.end(2):]
 
-        # Solo i byte di Coords: baseline, testo e formattazione restano identici.
+        # Coordinate e spazi esterni al testo; la baseline resta invariata.
         updated = re.sub(br'<(?:\w+:)?TextLine\b[^>]*>.*?</(?:\w+:)?TextLine\s*>', replace_line, raw, flags=re.S)
         ET.fromstring(updated)
         path.write_bytes(updated)

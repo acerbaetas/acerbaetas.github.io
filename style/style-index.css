@@ -304,7 +304,7 @@
 
 .discovery-section {
   width: 100%;
-  margin: 4rem auto 5rem;
+  margin: 4rem auto 3rem;
 }
 
 /* Cards */
@@ -413,4 +413,107 @@
     letter-spacing: 0.08em;
   }
 
+}
+
+
+
+
+
+/* ==========================================
+   ANNIVERSARI
+   ========================================== */
+
+.anniversari {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+
+  background: var(--gold);
+  color: var(--night);
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+
+.anniversari-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.anniversario {
+  padding: .4rem 1rem;
+  text-align: center;
+}
+
+.anniversario + .anniversario {
+  border-left: 1px solid var(--night);
+}
+
+.anniversario-data {
+  display: block;
+  color: var(--night);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.anniversario-testo {
+  display: block;
+  margin-top: .4rem;
+  font-size: .9rem;
+}
+
+/* Mobile */
+
+/*@media (max-width: 575.98px) {
+  .anniversari-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .anniversario {
+    padding: .65rem .25rem;
+  }
+
+  .anniversario + .anniversario {
+    border-left: 0;
+    border-top: 1px solid rgba(248, 246, 242, .25);
+  }
+
+  .anniversario-data {
+    font-size: 3rem;
+  }
+}*/
+
+
+/* Anniversari - Mobile */
+
+@media (max-width: 575.98px) {
+  .anniversari-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 1rem .5rem;
+  }
+
+  .anniversario {
+    padding: .4rem .3rem;
+  }
+
+  .anniversario + .anniversario {
+    border-left: 1px solid var(--night);
+    border-top: 0;
+  }
+
+  .anniversario-data {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .anniversario-testo {
+    margin-top: .5rem;
+    font-size: .68rem;
+    line-height: 1.4;
+  }
 }

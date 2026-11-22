@@ -18,7 +18,13 @@ def xml(path):
 
 
 def text(element):
-    return ''.join(element.itertext()).strip() if element is not None else ''
+    if element is None:
+        return ''
+    def content(node):
+        return (node.text or '') + ''.join(
+            (content(child) if child.tag.split('}')[-1] != 'note' else '') + (child.tail or '')
+            for child in node)
+    return content(element).strip()
 
 
 def natural(value):
@@ -201,8 +207,10 @@ def manuscript(folder, edition):
             if page['first'] is None:
                 page['first'] = ref
             region = {'ref': ref, 'points': line['points']}
-            if block.get('status') == 'aligned' and len(block['matches']) > 1:
-                region['also'] = block['matches'][1:]
+            if block.get('status') in ('aligned', 'uncertain'):
+                aliases = [match for match in block['matches'] if match != ref]
+                if aliases:
+                    region['also'] = aliases
             page['regions'].append(region)
             for tag, props in line['tags']:
                 if tag not in ('person', 'place', 'planet', 'animal', 'stone', 'virtue'):
