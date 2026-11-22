@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b3c">
+  <title>L'Acerba | Acerba Etas</title>
+  <meta name="description" content="Leggi l'Acerba di Cecco d'Ascoli: edizione Crespi, trascrizioni e facsimili a confronto.">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style-pages.css">
+  <link rel="stylesheet" href="style/style-components.css">
+  <link rel="stylesheet" href="style/acerba.css">
+  <script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="scripts/components.js" defer></script>
+  <script src="scripts/acerba.js" defer></script>
+</head>
+<body class="acerba-page">
+  <header id="site-header"></header>
+  <main id="acerba" aria-label="Edizione digitale dell'Acerba">
+    <h1 class="visually-hidden">L'Acerba: edizione digitale</h1>
+    <nav class="acerba-subnav" aria-label="Strumenti di lettura">
+      <button id="open-index" class="btn btn-outline-night" disabled>Indice</button>
+      <div class="d-flex align-items-center gap-3">
+        <span id="panel-count" class="panel-count" aria-live="polite">0 / 5 pannelli</span>
+        <button id="open-add" class="btn btn-primary" disabled>+ Aggiungi pannello</button>
+      </div>
+    </nav>
+    <p id="load-status" class="m-3" role="status">Caricamento dell'edizione…</p>
+    <div id="panels" class="acerba-panels" aria-label="Pannelli di lettura"></div>
+    <nav class="panel-navigation" aria-label="Scorri i pannelli">
+      <button id="previous-panel" class="icon-button" aria-label="Pannello precedente" disabled>‹</button>
+      <span id="active-panel" aria-live="polite"></span>
+      <button id="next-panel" class="icon-button" aria-label="Pannello successivo" disabled>›</button>
+    </nav>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <div class="modal fade" id="index-modal" tabindex="-1" aria-labelledby="index-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="index-title">Indice</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi indice"></button></div>
+      <div class="modal-body index-layout"><nav id="index-tree" aria-label="Libri e capitoli"></nav></div>
+    </div></div>
+  </div>
+  <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="add-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="add-title">Aggiungi pannello</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi aggiungi pannello"></button></div>
+      <div class="modal-body"><div id="panel-options" class="panel-options"></div><p id="add-status" class="small mt-3 mb-0" role="status"></p></div>
+      <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">Annulla</button><button class="btn btn-primary" id="confirm-add">Aggiungi</button></div>
+    </div></div>
+  </div>
+  <div class="modal fade" id="filter-modal" tabindex="-1" aria-labelledby="filter-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="filter-title">Filtra le categorie</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi filtri"></button></div>
+      <div class="modal-body" id="filter-options"></div>
+      <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">Annulla</button><button class="btn btn-primary" id="confirm-filter">Applica</button></div>
+    </div></div>
+  </div>
+  <noscript><p class="m-3">Abilita JavaScript per leggere e confrontare i pannelli.</p></noscript>
+</body>
+</html>

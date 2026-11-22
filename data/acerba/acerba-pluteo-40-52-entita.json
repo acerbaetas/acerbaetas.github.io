@@ -1,0 +1,134 @@
+{
+  "entities": [
+    {
+      "id": "person:Q728592",
+      "type": "person",
+      "name": "Francesco Stabili",
+      "description": "Nascita: 1269; Morte: 1327",
+      "wikidata": "Q728592",
+      "occurrences": [
+        {
+          "ref": "1-1-h",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "person:Q39837",
+      "type": "person",
+      "name": "Abū al-Walīd Muḥammad ibn ʾAḥmad ibn Rušd",
+      "description": "Nascita: 1126; Morte: 1198",
+      "wikidata": "Q39837",
+      "occurrences": [
+        {
+          "ref": "1-2-34",
+          "order": 121
+        }
+      ]
+    },
+    {
+      "id": "person:Q1067",
+      "type": "person",
+      "name": "Durante di Alighiero degli Alighieri",
+      "description": "Nascita: 1265; Morte: 1321",
+      "wikidata": "Q1067",
+      "occurrences": [
+        {
+          "ref": "1-2-67",
+          "order": 142
+        }
+      ]
+    },
+    {
+      "id": "person:Q232913",
+      "type": "person",
+      "name": "Beatrice Portinari",
+      "description": "Nascita: 1265; Morte: 1290",
+      "wikidata": "Q232913",
+      "occurrences": [
+        {
+          "ref": "1-2-68",
+          "order": 143
+        }
+      ]
+    },
+    {
+      "id": "person:Q1398",
+      "type": "person",
+      "name": "Publio Virgilio Marone",
+      "description": "Nascita: -19; Morte: -70",
+      "wikidata": "Q1398",
+      "occurrences": [
+        {
+          "ref": "1-2-73",
+          "order": 148
+        }
+      ]
+    },
+    {
+      "id": "place:Q183",
+      "type": "place",
+      "name": "Germania",
+      "description": "Paese: Germania",
+      "wikidata": "Q183",
+      "occurrences": [
+        {
+          "ref": "1-8-63",
+          "order": 600
+        }
+      ]
+    },
+    {
+      "id": "place:Q103011",
+      "type": "place",
+      "name": "Corinto",
+      "description": "Paese: Grecia",
+      "wikidata": "Q103011",
+      "occurrences": [
+        {
+          "ref": "1-8-88",
+          "order": 625
+        }
+      ]
+    },
+    {
+      "id": "place:Q1286",
+      "type": "place",
+      "name": "Alpi",
+      "description": "Paese: Italia",
+      "wikidata": "Q1286",
+      "occurrences": [
+        {
+          "ref": "1-8-99",
+          "order": 636
+        }
+      ]
+    },
+    {
+      "id": "place:Q1263",
+      "type": "place",
+      "name": "Romagna",
+      "description": "Paese: Italia",
+      "wikidata": "Q1263",
+      "occurrences": [
+        {
+          "ref": "1-8-101",
+          "order": 638
+        }
+      ]
+    },
+    {
+      "id": "place:Q1273",
+      "type": "place",
+      "name": "Toscana",
+      "description": "Paese: Italia",
+      "wikidata": "Q1273",
+      "occurrences": [
+        {
+          "ref": "1-8-101",
+          "order": 638
+        }
+      ]
+    }
+  ]
+}
