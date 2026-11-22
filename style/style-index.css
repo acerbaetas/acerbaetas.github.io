@@ -467,28 +467,6 @@
   font-size: .9rem;
 }
 
-/* Mobile */
-
-/*@media (max-width: 575.98px) {
-  .anniversari-grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .anniversario {
-    padding: .65rem .25rem;
-  }
-
-  .anniversario + .anniversario {
-    border-left: 0;
-    border-top: 1px solid rgba(248, 246, 242, .25);
-  }
-
-  .anniversario-data {
-    font-size: 3rem;
-  }
-}*/
-
 
 /* Anniversari - Mobile */
 
@@ -516,4 +494,21 @@
     font-size: .68rem;
     line-height: 1.4;
   }
+}
+
+
+/* Correzione banner anniversari per Safari iOS */
+
+.anniversari {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.anniversario {
+  min-width: 0;
+}
+
+.anniversario-testo {
+  overflow-wrap: break-word;
+  word-break: normal;
 }
