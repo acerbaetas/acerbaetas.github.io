@@ -52,7 +52,7 @@
                 <Coords points="501,658.407 1672,661.407 1672,735.005 501,732.005"/>
                 <Baseline points="501,722 1672,725"/>
                 <TextEquiv>
-                    <Unicode>Qual insignal el tempo campo circuscrive                                                                                                                 </Unicode>
+                    <Unicode>Qual insignal el tempo campo circuscrive</Unicode>
                 </TextEquiv>
             </TextLine>
             <TextLine id="tr_1_tl_11" custom="readingOrder {index:6;}">
@@ -77,7 +77,7 @@
                 </TextEquiv>
             </TextLine>
             <TextLine id="tr_1_tl_17" custom="readingOrder {index:9;} differentReading {offset:30; length:7;}">
-                <Coords points="498,922.398 1388,916.398 1388,995.569 498,1001.57"/>
+                <Coords points="498,922.398 1388,916.398 1388,995.57 498,1001.57"/>
                 <Baseline points="498,985 1388,979"/>
                 <TextEquiv>
                     <Unicode>A tal potentia no po stare se rebella</Unicode>

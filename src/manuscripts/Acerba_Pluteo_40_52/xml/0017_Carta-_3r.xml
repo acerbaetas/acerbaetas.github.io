@@ -77,7 +77,7 @@
                 </TextEquiv>
             </TextLine>
             <TextLine id="tr_1_tl_13" custom="readingOrder {index:9;}">
-                <Coords points="522,912.977 1386,908.977 1386,998.958 522,1002.96"/>
+                <Coords points="522,912.977 1386,908.977 1386,998.96 522,1002.96"/>
                 <Baseline points="522,981 1386,977"/>
                 <TextEquiv>
                     <Unicode>Ponendo l cielo cosi del vero poco</Unicode>
