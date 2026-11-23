@@ -2413,20 +2413,19 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-2-u1",
+              "id": "1-2-48",
               "kind": "verse",
               "order": 135,
               "lines": [
                 {
-                  "text": "Onda la vita l amoroso bene <note>Dopo questa linea ci sono 12 linee mancanti, presenti nel BIBIT</note>",
+                  "text": "Onda la vita l amoroso bene",
                   "page": "0017_Carta-_3r",
                   "annotations": []
                 }
               ],
-              "status": "uncertain",
+              "status": "aligned",
               "matches": [
-                "1-2-48",
-                "1-2-49"
+                "1-2-48"
               ]
             },
             {
@@ -2494,7 +2493,7 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-2-u2",
+              "id": "acerba-pluteo-40-52:1-2-u1",
               "kind": "verse",
               "order": 140,
               "lines": [
@@ -6750,20 +6749,19 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-5-u4",
+              "id": "1-5-55",
               "kind": "verse",
               "order": 385,
               "lines": [
                 {
-                  "text": "Anci son tre l una de le quali <note>Qui manca una linea, presente in Crespi e Stuttgart. La linea mancante si trova nella linea cinque</note>",
+                  "text": "Anci son tre l una de le quali",
                   "page": "0024_Carta-_6v",
                   "annotations": []
                 }
               ],
-              "status": "uncertain",
+              "status": "aligned",
               "matches": [
-                "1-5-55",
-                "1-5-56"
+                "1-5-55"
               ]
             },
             {
@@ -6815,20 +6813,19 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-5-u5",
+              "id": "1-5-56",
               "kind": "verse",
               "order": 389,
               "lines": [
                 {
-                  "text": "Se mostra in viso de la stella blancha <note>Questa linea in Crespi e Stuttgard si trova nella seconda linea, qui invece in quinta</note>",
+                  "text": "Se mostra in viso de la stella blancha",
                   "page": "0025_Carta-_7r",
                   "annotations": []
                 }
               ],
-              "status": "uncertain",
+              "status": "aligned",
               "matches": [
-                "1-5-56",
-                "1-5-57"
+                "1-5-56"
               ]
             },
             {
@@ -8233,12 +8230,12 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-7-u1",
+              "id": "1-7-6",
               "kind": "verse",
               "order": 472,
               "lines": [
                 {
-                  "text": "Saliendosse condensia a poco a poco <note>Linea invertita in Crespi. Posizione 6.</note>",
+                  "text": "Saliendosse condensia a poco a poco",
                   "page": "0027_Carta-_8r",
                   "annotations": [
                     {
@@ -8249,10 +8246,9 @@
                   ]
                 }
               ],
-              "status": "uncertain",
+              "status": "aligned",
               "matches": [
-                "1-7-6",
-                "1-7-7"
+                "1-7-6"
               ]
             },
             {
@@ -8272,20 +8268,19 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-7-u2",
+              "id": "1-7-4",
               "kind": "verse",
               "order": 474,
               "lines": [
                 {
-                  "text": "Per li reflexi raçi e po per foco <note>Linea invertita in Crespi. Posizione 4.</note>",
+                  "text": "Per li reflexi raçi e po per foco",
                   "page": "0027_Carta-_8r",
                   "annotations": []
                 }
               ],
-              "status": "uncertain",
+              "status": "aligned",
               "matches": [
-                "1-7-4",
-                "1-7-5"
+                "1-7-4"
               ]
             },
             {
@@ -8809,7 +8804,7 @@
               ]
             },
             {
-              "id": "acerba-pluteo-40-52:1-7-u3",
+              "id": "acerba-pluteo-40-52:1-7-u1",
               "kind": "verse",
               "order": 504,
               "lines": [
@@ -10377,7 +10372,7 @@
               "order": 593,
               "lines": [
                 {
-                  "text": "Forno trovate che da  luna fronte",
+                  "text": "Forno trovate che da luna fronte",
                   "page": "0031_Carta-_10r",
                   "annotations": []
                 }

@@ -255,10 +255,6 @@
   }
   function syncText(panel) {
     const selected = resolve(state.v,panel.refs);
-    if (selected) {
-      const row = panel.rows.get(selected.id)[0];
-      panel.body.scrollTop += row.getBoundingClientRect().top-panel.body.getBoundingClientRect().top-16;
-    }
     panel.body.querySelectorAll(".selected,.fallback").forEach(e => { e.classList.remove("selected","fallback"); e.removeAttribute("aria-pressed"); });
     panel.body.querySelectorAll(".fallback-label").forEach(e => e.remove());
     if (selected) for (const row of panel.rows.get(selected.id)) {
@@ -266,6 +262,11 @@
       row.setAttribute("aria-pressed",String(!selected.fallback));
     }
     if (selected?.fallback) panel.rows.get(selected.id)[0].append(el("small","fallback-label","Riferimento assente: posizione disponibile nel capitolo"));
+    // Gli avvisi cambiano l'altezza delle righe: misura solo il layout definitivo.
+    if (selected) {
+      const row = panel.rows.get(selected.id)[0];
+      panel.body.scrollTop += row.getBoundingClientRect().top-panel.body.getBoundingClientRect().top-16;
+    }
   }
   function updatePanel(panel) {
     if (!panel.data) return;

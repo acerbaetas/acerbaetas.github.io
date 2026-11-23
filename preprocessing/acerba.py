@@ -2,6 +2,7 @@
 import json
 import re
 import unicodedata
+from bisect import bisect_left
 from collections import Counter, defaultdict
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -56,6 +57,36 @@ def custom(raw):
     return result
 
 
+def clean_line(value, tags):
+    # Maschera le note mantenendo le posizioni originali per rimappare i range.
+    masked = re.sub(r'<note\b[^>]*>.*?</note\s*>',
+                    lambda m: ' ' * len(m[0]), value, flags=re.I | re.S)
+    words = list(re.finditer(r'\S+', masked))
+    cleaned, positions = [], []
+    for word in words:
+        if cleaned:
+            cleaned.append(' ')
+            positions.append(word.start()-1)
+        cleaned.extend(word[0])
+        positions.extend(range(word.start(), word.end()))
+    value = ''.join(cleaned)
+    adjusted = []
+    for tag, props in tags:
+        props = props.copy()
+        if 'offset' in props and 'length' in props:
+            start, end = int(props['offset']), int(props['offset'])+int(props['length'])
+            left, right = bisect_left(positions, start), bisect_left(positions, end)
+            while left < right and value[left].isspace():
+                left += 1
+            while right > left and value[right-1].isspace():
+                right -= 1
+            if left == right:
+                continue
+            props.update(offset=str(left), length=str(right-left))
+        adjusted.append((tag, props))
+    return value, adjusted
+
+
 def read_crespi(path):
     root = xml(path)
     books = []
@@ -101,7 +132,7 @@ def read_pages(folder):
                 equiv = sorted(line.findall('p:TextEquiv', ns), key=lambda e: int(e.get('index', 0)))
                 value = equiv[0].findtext('p:Unicode', '', ns) if equiv else ''
                 coords = line.find('p:Coords', ns)
-                tags = custom(line.get('custom', ''))
+                value, tags = clean_line(value, custom(line.get('custom', '')))
                 annotations = []
                 for tag, props in tags:
                     if tag not in ('uncertain', 'differentReading', 'person', 'place', 'planet', 'animal', 'stone', 'virtue'):
