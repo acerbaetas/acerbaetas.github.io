@@ -534,5 +534,18 @@
     "datazione": "1376",
     "notBefore": 1376,
     "notAfter": 1376
-  }
+  },
+  {
+  "nome_codice": "MSS 000279 B",
+  "biblioteca": "Dibner Library, Smithsonian Libraries and Archives, Washington D.C.",
+  "coordinate_biblioteca": {
+    "lat": 38.891334,
+    "lng": -77.029946
+  },
+  "link": "https://library.si.edu/digital-library/book/acerba00cecc",
+  "tipo_link": "digitalizzazione",
+  "datazione": "XV secolo",
+  "notBefore": 1425,
+  "notAfter": 1475
+}
 ]
