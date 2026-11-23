@@ -1,6 +1,7 @@
 /* All edition rules are scoped: the shared navbar and other pages are untouched. */
-/* Il blocco dello scroll sul body deve propagarsi alla viewport per le modali Bootstrap. */
-html:has(body.acerba-page) { overflow: visible; }
+/* Gutter stabile anche con modali aperte, senza arrotondamenti nella compensazione Bootstrap. */
+html:has(body.acerba-page) { overflow: visible; scrollbar-gutter: stable; }
+.acerba-page.modal-open { padding-right: 0 !important; }
 .acerba-page { min-height: 100dvh; display: flex; flex-direction: column; }
 .acerba-page #site-header { flex: 0 0 auto; }
 .acerba-page #acerba { height: calc(100dvh - 76px); min-height: 32rem; flex: 0 0 auto; display: flex; flex-direction: column; background: #f4f6f8; }
