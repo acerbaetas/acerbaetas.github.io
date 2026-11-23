@@ -23,11 +23,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-  <!-- Leaflet: libreria per la mappa interattiva -->
+  <!-- Leaflet + MarkerCluster: i marker vicini sono raggruppati in base allo zoom. -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="style/style-pages.css">
 
+  <!-- Cluster personalizzati in blu notte e oro, senza modificare style-pages.css. -->
+  <style>
+    .codici-map .codici-cluster {
+      background: transparent;
+      border: 0;
+    }
+
+    /* Il nome del codice nel popup è il link alla sua riga. */
+    .codici-map .map-popup-title a {
+      color: var(--night, #101b3c);
+      text-decoration: underline;
+      text-decoration-color: var(--gold, #dcb023);
+      text-underline-offset: .18em;
+    }
+
+    .codici-map .map-popup-title a:hover,
+    .codici-map .map-popup-title a:focus-visible {
+      color: var(--link-gold, #8c6400);
+    }
+
+    .codici-map .codici-cluster span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      width: 44px;
+      height: 44px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: var(--night, #101b3c);
+      color: var(--gold, #dcb023);
+      box-shadow: 0 2px 8px rgba(16, 27, 60, .25);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  </style>
+
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
   <script src="scripts/codici.js" defer></script>
   <script src="scripts/components.js" defer></script>
   <link rel="stylesheet" href="style/style-components.css">
@@ -41,42 +81,72 @@
       <h1>I codici dell’<em>Acerba</em></h1>
 
       <p class="method-note">
-        Il presente elenco raccoglie una selezione di codici dell’<em>Acerba</em> di Cecco d’Ascoli
-        per i quali sono state individuate risorse digitali consultabili online, quali riproduzioni
-        digitalizzate e schede catalografiche. <br>
-        <b>Nota:</b> L'elenco nasce dal censimento pubblicato nel 1916 da Pasquale Rosario e non costituisce un repertorio esaustivo dei testimoni conservati dell’opera.
+        L’elenco raccoglie una selezione di testimoni manoscritti dell’<em>Acerba</em> di Cecco d’Ascoli, databili tra il XIV e il XV secolo e conservati in biblioteche italiane e straniere.<br/>
+        Per ciascun codice sono riportate la <b>segnatura</b>, la <b>datazione</b> e la <b>biblioteca</b> di conservazione, con <b>collegamenti</b>, dove disponibili, a riproduzioni digitali e schede catalografiche. Le note forniscono ulteriori informazioni sul contenuto dei manoscritti e sulle pagine consultabili online.<br/>
+        
+      </p>
+      <p class="method-note mt-4">
+        <b>Nota:</b> Il censimento è in costante aggiornamento.
       </p>
     </div>
 
     <section class="codici-map-section" aria-label="Mappa delle biblioteche che conservano i codici">
-      <p class="map-instructions">Seleziona una biblioteca sulla mappa per vedere i codici che conserva.</p>
+      <p class="map-instructions">Seleziona un codice sulla mappa per vedere la biblioteca che lo conserva. I numeri indicano i codici raggruppati: clicca sul gruppo per esplorarli.</p>
       <div id="mappa-codici" class="codici-map" role="region"
-           aria-label="Mappa interattiva delle biblioteche dei codici dell'Acerba"></div>
+           aria-label="Mappa interattiva dei codici dell'Acerba nelle biblioteche di conservazione"></div>
       <p id="stato-mappa" class="load-status" role="status">Caricamento della mappa…</p>
     </section>
 
     <section aria-label="Elenco dei codici" id="tabella-codici">
       <p id="stato-codici" class="load-status" role="status">Caricamento dei codici…</p>
+
+      <div class="row g-3 mb-3 align-items-end" role="search" aria-label="Ricerca e filtri dei codici">
+        <div class="col-12 col-lg-6">
+          <label for="ricerca-codici" class="form-label">Cerca un codice o una biblioteca</label>
+          <input id="ricerca-codici" type="search" class="form-control" autocomplete="off">
+        </div>
+        <div class="col-6 col-lg-3">
+          <label for="filtro-risorsa" class="form-label">Tipo di risorsa</label>
+          <select id="filtro-risorsa" class="form-select">
+            <option value="tutte">Tutte</option>
+            <option value="digitalizzazione">Digitalizzazione</option>
+            <option value="scheda">Scheda</option>
+          </select>
+        </div>
+        <div class="col-6 col-lg-3">
+          <label for="ordina-codici" class="form-label">Ordina per</label>
+          <select id="ordina-codici" class="form-select">
+            <option value="nome">Codice A–Z</option>
+            <option value="biblioteca">Biblioteca A–Z</option>
+            <option value="datazione">Datazione (più antichi)</option>
+          </select>
+        </div>
+      </div>
+      <p id="conteggio-codici" class="small text-body-secondary" aria-live="polite"></p>
       <table class="table codici-table">
-        <caption class="visually-hidden">Codici dell'Acerba con datazione, biblioteca di conservazione e collegamento alla risorsa online.</caption>
+        <caption class="visually-hidden">Codici dell'Acerba con datazione, biblioteca, risorse online e note.</caption>
         <colgroup>
           <col class="col-nome">
           <col class="col-datazione">
           <col class="col-biblioteca">
           <col class="col-link">
+          <col class="col-note">
         </colgroup>
         <thead>
           <tr>
-            <th scope="col">Nome</th>
+            <th scope="col">Codice</th>
             <th scope="col">Datazione</th>
             <th scope="col">Biblioteca</th>
             <th scope="col">Link</th>
+            <th scope="col">Note</th>
           </tr>
         </thead>
         <tbody id="elenco-codici">
           <!-- Le righe vengono generate da codici.js con i dati del file JSON. -->
         </tbody>
       </table>
+      
+      <p id="nessun-risultato" class="text-body-secondary" hidden>Nessun codice corrisponde alla ricerca.</p>
     </section>
   </main>
 

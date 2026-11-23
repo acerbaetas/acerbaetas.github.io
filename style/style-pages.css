@@ -170,7 +170,7 @@ body {
   color: var(--night);
 }
 
-/* Tabella a quattro colonne: una riga per codice, nessuna card. */
+/* Tabella a cinque colonne: una riga per codice, nessuna card. */
 .codici-table {
   width: 100%;
   margin-bottom: 0;
@@ -180,10 +180,11 @@ body {
   --bs-table-color: var(--night);
 }
 
-.codici-table .col-nome { width: 24%; }
-.codici-table .col-datazione { width: 16%; }
-.codici-table .col-biblioteca { width: 38%; }
-.codici-table .col-link { width: 22%; }
+.codici-table .col-nome { width: 15%; }
+.codici-table .col-datazione { width: 12%; }
+.codici-table .col-biblioteca { width: 28%; }
+.codici-table .col-link { width: 19%; }
+.codici-table .col-note { width: 26%; }
 
 .codici-table thead th {
   padding: .65rem .65rem .75rem;
@@ -209,7 +210,7 @@ body {
 }
 
 .codici-table .codice-link-cell {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .codici-table .codice-link {
@@ -676,4 +677,22 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .progetto-page .progetto-sezioni a { transition: none; }
+}
+
+
+
+
+
+/* Note leggibili, senza vincoli di larghezza incompatibili con table-layout: fixed. */
+.codici-table .codice-note {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Sulle schede verticali per tablet e smartphone mostra anche l'etichetta Note. */
+@media (max-width: 991.98px) {
+  .codici-table .codice-note::before {
+    content: "Note: ";
+    font-weight: 600;
+  }
 }

@@ -1,0 +1,538 @@
+[
+  {
+    "nome_codice": "Plut.40.52",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/465948",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400,
+    "iiif_manifest": "https://tecabml.contentdm.oclc.org/iiif/2/plutei:465948/manifest.json"
+  },
+  {
+    "nome_codice": "Plut.40.51",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/715849",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500,
+    "iiif_manifest": "https://tecabml.contentdm.oclc.org/iiif/info/plutei/716054/manifest.json"
+  },
+  {
+    "nome_codice": "Plut.41.39",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/742245",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500,
+    "iiif_manifest": "https://tecabml.contentdm.oclc.org/iiif/info/plutei/742245/manifest.json"
+  },
+  {
+    "nome_codice": "Plut.78.23",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/1094034",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XIV-XV secolo",
+    "notBefore": 1301,
+    "notAfter": 1500,
+    "iiif_manifest": "https://tecabml.contentdm.oclc.org/iiif/info/plutei/1094410/manifest.json",
+    "note": "Acerba: 84r-87v"
+  },
+  {
+    "nome_codice": "Plut.41.2",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/603283/rec/2",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400,
+    "iiif_manifest": "https://tecabml.contentdm.oclc.org/iiif/info/plutei/603283/manifest.json",
+    "note": "Acerba: 49r-50v (libro I, cap I-V. Del cap. V solo inizio)"
+  },
+  {
+    "nome_codice": "Plut.89 sup.111",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/977411",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400,
+    "iiif_manifest": "https://tecabml.contentdm.oclc.org/iiif/info/plutei/977411/manifest.json"
+  },
+  {
+    "nome_codice": "Ashburnham 370",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://www.bmlonline.it/la-biblioteca/cataloghi/fondo-ashburnham-catalogo/#:~:text=370%20CECCO%20D%E2%80%99ASCOLI.%20L%E2%80%99Acerba%2C%20Poema.%20Cod.%20cart.%20in%20quarto%20del%20XV%20sec.",
+    "tipo_link": "scheda",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "Ashburnham 1223",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://www.bmlonline.it/la-biblioteca/cataloghi/fondo-ashburnham-catalogo/#:~:text=datata%20del%20990.-,1223%20CECCO%20D%E2%80%99ASCOLI,-.%20L%E2%80%99Acerba.%20Cod.%20membr",
+    "tipo_link": "scheda",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400
+  },
+  {
+    "nome_codice": "Ashburnham 1225",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://www.bmlonline.it/la-biblioteca/cataloghi/fondo-ashburnham-catalogo/#:~:text=1225%20CECCO%20D%E2%80%99ASCOLI.%20L%E2%80%99Acerba.",
+    "tipo_link": "scheda",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400
+  },
+  {
+    "nome_codice": "Ashburnham 1724",
+    "biblioteca": "Biblioteca Mediecea Laurenziana, Firenze",
+    "coordinate_biblioteca": {
+      "lat": 43.774661,
+      "lng": 11.254539
+    },
+    "link": "https://www.bmlonline.it/la-biblioteca/cataloghi/fondo-ashburnham-catalogo/#:~:text=1724%20CECCO%20D%E2%80%99ASCOLI.%20L%E2%80%99Acerba.",
+    "tipo_link": "scheda",
+    "datazione": "XIV-XV secolo",
+    "notBefore": 1301,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "Varia 120",
+    "biblioteca": "Biblioteca Reale, Musei Reali di Torino",
+    "coordinate_biblioteca": {
+      "lat": 45.07167,
+      "lng": 7.617445
+    },
+    "link": "https://cataloghistorici.bdi.sbn.it/file_viewer.php?IDCAT=138&IDGRP=1380014&IDIMG=16104&LEVEL=1&PADRE=1380001&PROV=INT",
+    "tipo_link": "scheda",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400
+  },
+  {
+    "nome_codice": "Triv.1020",
+    "biblioteca": "Archivio storico civico e Biblioteca trivulziana, Milano",
+    "coordinate_biblioteca": {
+      "lat": 45.470331,
+      "lng": 9.178211
+    },
+    "link": "https://manus.iccu.sbn.it/risultati-ricerca-manoscritti/-/manus-search/cnmd/0000050156",
+    "tipo_link": "scheda",
+    "datazione": "1471",
+    "notBefore": 1471,
+    "notAfter": 1471,
+    "note": "Disponibili online tre pagine del codice: 25r, 38v,71v",
+    "immagini_online": [
+      {
+        "etichetta": "f. 25r",
+        "url": "https://mssormani.comune.milano.it/trivulziana/MI0327_Trivulziano_Triv.1020_0025r.jpg"
+      },
+      {
+        "etichetta": "f. 38v",
+        "url": "https://mssormani.comune.milano.it/trivulziana/MI0327_Trivulziano_Triv.1020_0038v.jpg"
+      },
+      {
+        "etichetta": "f. 71v",
+        "url": "https://mssormani.comune.milano.it/trivulziana/MI0327_Trivulziano_Triv.1020_0071v.JPG"
+      }
+    ]
+  },
+  {
+    "nome_codice": "Triv.1021",
+    "biblioteca": "Archivio storico civico e Biblioteca trivulziana, Milano",
+    "coordinate_biblioteca": {
+      "lat": 45.470331,
+      "lng": 9.178211
+    },
+    "link": "https://archive.org/details/catalogodeicodic00porr/page/68/mode/2up",
+    "tipo_link": "scheda",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "α.Q.9.34",
+    "biblioteca": "Biblioteca Estense Universitaria, Modena",
+    "coordinate_biblioteca": {
+      "lat": 44.64811,
+      "lng": 10.92142
+    },
+    "link": null,
+    "tipo_link": null,
+    "datazione": null,
+    "notBefore": null,
+    "notAfter": null,
+    "pubblica": false
+  },
+  {
+    "nome_codice": "α.M.7.34",
+    "biblioteca": "Biblioteca Estense Universitaria, Modena",
+    "coordinate_biblioteca": {
+      "lat": 44.64811,
+      "lng": 10.92142
+    },
+    "link": null,
+    "tipo_link": null,
+    "datazione": null,
+    "notBefore": null,
+    "notAfter": null,
+    "pubblica": false
+  },
+  {
+    "nome_codice": "Urb.lat.697",
+    "biblioteca": "Biblioteca Apostolica Vaticana, Città del Vaticano",
+    "coordinate_biblioteca": {
+      "lat": 41.904722,
+      "lng": 12.454444
+    },
+    "link": "https://digi.vatlib.it/view/MSS_Urb.lat.697",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XIV",
+    "notBefore": 1301,
+    "notAfter": 1400,
+    "iiif_manifest": "https://digi.vatlib.it/iiif/MSS_Urb.lat.697/manifest.json",
+    "note": "Acerba: 1r-47v; 73v-80r; 92r-107v"
+  },
+  {
+    "nome_codice": "Italien 576",
+    "biblioteca": "Bibliothèque nationale de France, Parigi",
+    "coordinate_biblioteca": {
+      "lat": 48.867199,
+      "lng": 2.33906
+    },
+    "link": "https://gallica.bnf.fr/ark:/12148/btv1b84333211/f11.item#",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "Italien 577",
+    "biblioteca": "Bibliothèque nationale de France, Parigi",
+    "coordinate_biblioteca": {
+      "lat": 48.867199,
+      "lng": 2.33906
+    },
+    "link": "https://gallica.bnf.fr/ark:/12148/btv1b10033045h/f3.item",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "Italien 579",
+    "biblioteca": "Bibliothèque nationale de France, Parigi",
+    "coordinate_biblioteca": {
+      "lat": 48.867199,
+      "lng": 2.33906
+    },
+    "link": "https://gallica.bnf.fr/ark:/12148/btv1b10033046z/f2.item",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400
+  },
+  {
+    "nome_codice": "Italien 1070",
+    "biblioteca": "Bibliothèque nationale de France, Parigi",
+    "coordinate_biblioteca": {
+      "lat": 48.867199,
+      "lng": 2.33906
+    },
+    "link": "https://gallica.bnf.fr/ark:/12148/btv1b10033047d/f3.item",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "78 C 25",
+    "biblioteca": "Kupferstichkabinett, Staatliche Museen zu Berlin",
+    "coordinate_biblioteca": {
+      "lat": 52.508389,
+      "lng": 13.367
+    },
+    "link": "https://search.smb.museum/?objectType=Miniatur+/+Seite&q=Acerba&has_images=true",
+    "tipo_link": "digitalizzazione_parziale",
+    "datazione": "1475",
+    "notBefore": 1475,
+    "notAfter": 1475,
+    "note": "Disponibili online quattro pagine del codice: 8r, 18v, 22v, 27r",
+    "immagini_online": [
+      {
+        "etichetta": "Pioggia",
+        "url": "https://search.smb.museum/object/obj-2456724"
+      },
+      {
+        "etichetta": "Temperantia",
+        "url": "https://search.smb.museum/object/obj-2020233"
+      },
+      {
+        "etichetta": "Nobitilatis",
+        "url": "https://search.smb.museum/object/obj-2456725"
+      },
+      {
+        "etichetta": "Invidia",
+        "url": "https://search.smb.museum/object/obj-2456727"
+      }
+    ]
+  },
+  {
+    "nome_codice": "Ms. Ham. 93",
+    "biblioteca": "Staatsbibliothek zu Berlin - Preußischer Kulturbesitz, Berlin, Germany",
+    "coordinate_biblioteca": {
+      "lat": 52.506788,
+      "lng": 13.202
+    },
+    "link": "https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN1026637104&PHYSID=PHYS_0303&DMDID=DMDLOG_0004",
+    "tipo_link": "digitalizzazione",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500,
+    "note": "Acerba: 148r-160v"
+  },
+  {
+    "nome_codice": "Ms. Ham 139",
+    "biblioteca": "Staatsbibliothek zu Berlin - Preußischer Kulturbesitz, Berlin, Germany",
+    "coordinate_biblioteca": {
+      "lat": 52.506788,
+      "lng": 13.202
+    },
+    "link": "http://resolver.staatsbibliothek-berlin.de/SBB000267E800000000",
+    "tipo_link": "digitalizzazione",
+    "datazione": "1475",
+    "notBefore": 1475,
+    "notAfter": 1475
+  },
+  {
+    "nome_codice": "Ms.C.VI.21",
+    "biblioteca": "Biblioteca Queriniana, Brescia",
+    "coordinate_biblioteca": {
+      "lat": 45.538679,
+      "lng": 10.217
+    },
+    "link": "https://brixiana.medialibrary.it/media/schedadl.aspx?id=94a47bd7-c52d-443f-899e-19f5f61b4002",
+    "tipo_link": "digitalizzazione",
+    "datazione": "1464",
+    "notBefore": 1464,
+    "notAfter": 1464
+  },
+  {
+    "nome_codice": "MS. Canon. Ital. 38",
+    "biblioteca": "Bodleian Library, Oxford",
+    "coordinate_biblioteca": {
+      "lat": 51.754073,
+      "lng": -1.256
+    },
+    "link": "https://digital.bodleian.ox.ac.uk/objects/508d6f80-718b-4fcd-9de5-d1ae61379d83/",
+    "tipo_link": "digitalizzazione_parziale",
+    "datazione": "1456",
+    "notBefore": 1456,
+    "notAfter": 1456,
+    "note": "Disponibili online sette pagine del codice: 13v, 25r, 40r, 52r, 60v, 61r, 62r"
+  },
+  {
+    "nome_codice": "Marston MS 259 1",
+    "biblioteca": "Beinecke Library, Yale",
+    "coordinate_biblioteca": {
+      "lat": 41.258288,
+      "lng": -72.975
+    },
+    "link": "https://collections.library.yale.edu/catalog/2057429",
+    "tipo_link": "digitalizzazione_parziale",
+    "datazione": "1400-1450",
+    "notBefore": 1400,
+    "notAfter": 1450,
+    "iiif_manifest": "https://collections.library.yale.edu/manifests/2057429",
+    "note": "Disponibili online cinque pagine del codice: 1r, 1v, 2r, 50v,51r"
+  },
+  {
+    "nome_codice": "BANC MS UCB 116",
+    "biblioteca": "Bancroft Library, Berkeley",
+    "coordinate_biblioteca": {
+      "lat": 37.872304,
+      "lng": -122.26
+    },
+    "link": "https://digicoll.lib.berkeley.edu/record/229009?v=uv#?xywh=-1249%2C-623%2C4796%2C3896",
+    "tipo_link": "digitalizzazione_parziale",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500,
+    "note": "Acerba: 1r-25v"
+  },
+  {
+    "nome_codice": "I.VIII.35",
+    "biblioteca": "Biblioteca degli Intronati, Siena",
+    "coordinate_biblioteca": {
+      "lat": 43.320672,
+      "lng": 11.327
+    },
+    "link": "https://onesearch.unisi.it/permalink/39SBART_SBS_MAIN/1s18o78/alma9917414969203300",
+    "tipo_link": "scheda",
+    "datazione": "1441-1460",
+    "notBefore": 1441,
+    "notAfter": 1460,
+    "note": "Acerba: 91r-135v"
+  },
+  {
+    "nome_codice": "Cod.poet.et.phil.fol.19",
+    "biblioteca": "Württembergische Landesbibliothek, Stoccarda",
+    "coordinate_biblioteca": {
+      "lat": 48.777743,
+      "lng": 9.182
+    },
+    "link": "https://digital.wlb-stuttgart.de/index.php?id=6&tx_dlf%5Bid%5D=3904&tx_dlf%5Bpage%5D=189",
+    "tipo_link": "digitalizzazione",
+    "datazione": "1340 - 1350",
+    "notBefore": 1340,
+    "notAfter": 1350,
+    "note": "Acerba: 93r-123v"
+  },
+  {
+    "nome_codice": "Ms.3658",
+    "biblioteca": "Biblioteca Universitaria di Bologna",
+    "coordinate_biblioteca": {
+      "lat": 44.496592,
+      "lng": 11.35
+    },
+    "link": "https://manus.iccu.sbn.it/risultati-ricerca-manoscritti/-/manus-search/cnmd/0000217207",
+    "tipo_link": "scheda",
+    "datazione": "1396-1397",
+    "notBefore": 1396,
+    "notAfter": 1397,
+    "note": "Acerba: 11r-103v"
+  },
+  {
+    "nome_codice": "ms.A01",
+    "biblioteca": "Biblioteca francescano-cappuccina provinciale, Milano",
+    "coordinate_biblioteca": {
+      "lat": 45.468457,
+      "lng": 9.205
+    },
+    "link": "https://manus.iccu.sbn.it/risultati-ricerca-manoscritti/-/manus-search/cnmd/0000050083",
+    "tipo_link": "scheda",
+    "datazione": "1451-1475",
+    "notBefore": 1451,
+    "notAfter": 1475,
+    "note": "Acerba: 108r-137r"
+  },
+  {
+    "nome_codice": "MS. Canon. Ital. 43",
+    "biblioteca": "Bodleian Library, Oxford",
+    "coordinate_biblioteca": {
+      "lat": 51.754073,
+      "lng": -1.256
+    },
+    "link": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_2753",
+    "tipo_link": "scheda",
+    "datazione": "XIV secolo",
+    "notBefore": 1301,
+    "notAfter": 1400,
+    "note": "Acerba: Carte 3r-22r"
+  },
+  {
+    "nome_codice": "MS. Canon. Ital. 44",
+    "biblioteca": "Bodleian Library, Oxford",
+    "coordinate_biblioteca": {
+      "lat": 51.754073,
+      "lng": -1.256
+    },
+    "link": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_2754",
+    "tipo_link": "scheda",
+    "datazione": "XV secolo",
+    "notBefore": 1401,
+    "notAfter": 1500
+  },
+  {
+    "nome_codice": "MS Lat 290",
+    "biblioteca": "Houghton Library, Harvard",
+    "coordinate_biblioteca": {
+      "lat": 42.373076,
+      "lng": -71.118
+    },
+    "link": "https://id.lib.harvard.edu/alma/990094117970203941/catalog",
+    "tipo_link": "scheda",
+    "datazione": "1401",
+    "notBefore": 1401,
+    "notAfter": 1401
+  },
+  {
+    "nome_codice": "Cod. 2608 HAN MAG",
+    "biblioteca": "Österreichische Nationalbibliothek, Vienna",
+    "coordinate_biblioteca": {
+      "lat": 48.20626,
+      "lng": 16.364
+    },
+    "link": "https://viewer.onb.ac.at/1322944F",
+    "tipo_link": "digitalizzazione",
+    "datazione": "1400-1449",
+    "notBefore": 1400,
+    "notAfter": 1449,
+    "iiif_manifest": "https://api.onb.ac.at/iiif/presentation/v3/manifest/1322944F"
+  },
+  {
+    "nome_codice": "Add MS 21163",
+    "biblioteca": "British Library, Londra",
+    "coordinate_biblioteca": null,
+    "link": "https://searcharchives.bl.uk/catalog/032-002091537",
+    "tipo_link": "scheda",
+    "datazione": "XIV-XV secolo",
+    "notBefore": 1301,
+    "notAfter": 1500,
+    "note": "Acerba: 72-81"
+  },
+  {
+    "nome_codice": "Ms. 5",
+    "biblioteca": "Biblioteca Comunale “Giulio Gabrielli”, Ascoli Piceno",
+    "coordinate_biblioteca": {
+      "lat": 42.857105,
+      "lng": 13.573
+    },
+    "link": null,
+    "tipo_link": null,
+    "datazione": "1376",
+    "notBefore": 1376,
+    "notAfter": 1376
+  }
+]

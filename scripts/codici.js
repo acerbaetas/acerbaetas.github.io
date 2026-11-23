@@ -1,7 +1,7 @@
 "use strict";
 
 // Percorso relativo a codici.html, non a questo script.
-const CODICI_JSON = "./scripts/codici_acerba_verificati_dettaglio.json";
+const CODICI_JSON = "./scripts/codici_acerba.json";
 
 // Identificatore leggibile e stabile per collegare popup e righe della tabella.
 function idCodice(nome) {
@@ -22,6 +22,68 @@ function urlWebValido(link) {
   }
 }
 
+// I controlli agiscono soltanto sulla tabella: la mappa resta completa.
+const collatoreCodici = new Intl.Collator("it", { numeric: true, sensitivity: "base" });
+let catalogoCodici = [];
+
+function normalizzaRicerca(testo) {
+  return String(testo ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function confrontaCodici(a, b, criterio) {
+  const perNome = () => collatoreCodici.compare(a.nome_codice, b.nome_codice);
+
+  if (criterio === "biblioteca") {
+    return collatoreCodici.compare(a.biblioteca, b.biblioteca) || perNome();
+  }
+  if (criterio === "datazione") {
+    // Datazioni mancanti alla fine; notBefore/notAfter rappresentano intervalli.
+    const annoA = Number.isFinite(a.notBefore) ? a.notBefore : Infinity;
+    const annoB = Number.isFinite(b.notBefore) ? b.notBefore : Infinity;
+    const fineA = Number.isFinite(a.notAfter) ? a.notAfter : Infinity;
+    const fineB = Number.isFinite(b.notAfter) ? b.notAfter : Infinity;
+    return annoA - annoB || fineA - fineB || perNome();
+  }
+  return perNome();
+}
+
+function aggiornaCatalogo() {
+  const ricerca = normalizzaRicerca(document.getElementById("ricerca-codici").value);
+  const risorsa = document.getElementById("filtro-risorsa").value;
+  const ordine = document.getElementById("ordina-codici").value;
+  const corpoTabella = document.getElementById("elenco-codici");
+
+  let conteggio = 0;
+  const ordinati = [...catalogoCodici].sort((a, b) => confrontaCodici(a, b, ordine));
+  for (const codice of ordinati) {
+    const riga = document.getElementById(codice.id_tabella);
+    if (!riga) continue;
+
+    const contenuto = normalizzaRicerca(
+      [codice.nome_codice, codice.biblioteca, codice.datazione, codice.note].join(" ")
+    );
+    const corrispondeRicerca = !ricerca || contenuto.includes(ricerca);
+    // Il filtro "Digitalizzazione" include anche le digitalizzazioni parziali.
+    const corrispondeRisorsa = risorsa === "tutte"
+      || (risorsa === "digitalizzazione"
+        ? ["digitalizzazione", "digitalizzazione_parziale"].includes(codice.tipo_link)
+        : codice.tipo_link === "scheda");
+
+    riga.hidden = !(corrispondeRicerca && corrispondeRisorsa);
+    if (!riga.hidden) conteggio++;
+    // Riordina gli elementi esistenti: gli ID degli URL restano invariati.
+    corpoTabella.appendChild(riga);
+  }
+  document.getElementById("conteggio-codici").textContent =
+    `${conteggio} ${conteggio === 1 ? "codice" : "codici"} su ${catalogoCodici.length}`;
+  document.getElementById("nessun-risultato").hidden = conteggio !== 0;
+}
+
 function mostraTabella(codici) {
   const corpoTabella = document.getElementById("elenco-codici");
   const stato = document.getElementById("stato-codici");
@@ -31,7 +93,7 @@ function mostraTabella(codici) {
 
   for (const codice of codici) {
     const indirizzo = urlWebValido(codice.link);
-    if (!codice.nome_codice || !codice.biblioteca || !indirizzo) {
+    if (!codice.nome_codice || !codice.biblioteca) {
       console.warn("Record incompleto, ignorato:", codice);
       continue;
     }
@@ -59,22 +121,47 @@ function mostraTabella(codici) {
     const cellaLink = document.createElement("td");
     cellaLink.className = "codice-link-cell";
 
-    const collegamento = document.createElement("a");
-    collegamento.className = "codice-link";
-    collegamento.href = indirizzo;
-    collegamento.target = "_blank";
-    collegamento.rel = "noopener noreferrer";
-    collegamento.textContent = codice.tipo_link === "digitalizzazione"
-      ? "Visualizza il manoscritto"
-      : "Consulta la scheda";
+    const contenitoreLink = document.createElement("div");
+    contenitoreLink.className = "d-flex flex-column align-items-start gap-1";
 
-    const icona = document.createElement("i");
-    icona.className = "bi bi-box-arrow-up-right";
-    icona.setAttribute("aria-hidden", "true");
-    collegamento.appendChild(icona);
+    if (indirizzo) {
+      const collegamento = document.createElement("a");
+      collegamento.className = "codice-link";
+      collegamento.href = indirizzo;
+      collegamento.target = "_blank";
+      collegamento.rel = "noopener noreferrer";
+      collegamento.textContent = ["digitalizzazione", "digitalizzazione_parziale"].includes(codice.tipo_link)
+        ? "Digitalizzazione"
+        : "Scheda";
 
-    cellaLink.appendChild(collegamento);
-    riga.append(cellaNome, cellaDatazione, cellaBiblioteca, cellaLink);
+      const icona = document.createElement("i");
+      icona.className = "bi bi-box-arrow-up-right";
+      icona.setAttribute("aria-hidden", "true");
+      collegamento.appendChild(icona);
+      contenitoreLink.appendChild(collegamento);
+    }
+
+    // I collegamenti alle singole immagini sono indipendenti dal link principale.
+    for (const immagine of codice.immagini_online || []) {
+      const url = urlWebValido(immagine.url);
+      if (!url) continue;
+      const linkImmagine = document.createElement("a");
+      linkImmagine.className = "codice-link";
+      linkImmagine.href = url;
+      linkImmagine.target = "_blank";
+      linkImmagine.rel = "noopener noreferrer";
+      linkImmagine.textContent = immagine.etichetta || "Pagina digitalizzata";
+      contenitoreLink.appendChild(linkImmagine);
+    }
+
+    if (!contenitoreLink.childElementCount) contenitoreLink.textContent = "—";
+    cellaLink.appendChild(contenitoreLink);
+
+    const cellaNote = document.createElement("td");
+    cellaNote.className = "codice-note";
+    cellaNote.textContent = codice.note?.trim() || "";
+
+    riga.append(cellaNome, cellaDatazione, cellaBiblioteca, cellaLink, cellaNote);
     righe.appendChild(riga);
     recordValidi.push(codice);
   }
@@ -98,42 +185,31 @@ function mostraMappa(codici) {
     return;
   }
 
-  // Un solo punto per biblioteca, anche quando conserva più codici.
-  const biblioteche = new Map();
-  for (const codice of codici) {
+  // Un marker per codice (non uno per biblioteca).
+  // I codici della stessa biblioteca hanno coordinate coincidenti:
+  // MarkerCluster li separa con lo spiderfy quando il gruppo non può più suddividersi.
+  const codiciMappabili = codici.filter(codice => {
     const posizione = codice.coordinate_biblioteca;
-    if (!posizione || !Number.isFinite(posizione.lat) || !Number.isFinite(posizione.lng)) {
-      console.warn("Coordinate mancanti o non valide:", codice.nome_codice);
-      continue;
-    }
+    const valido = posizione && Number.isFinite(posizione.lat) && Number.isFinite(posizione.lng);
+    if (!valido) console.warn("Coordinate mancanti o non valide:", codice.nome_codice);
+    return valido;
+  });
 
-    const chiave = codice.biblioteca.trim();
-    if (!biblioteche.has(chiave)) {
-      biblioteche.set(chiave, {
-        nome: chiave,
-        posizione: [posizione.lat, posizione.lng],
-        codici: []
-      });
-    }
-    biblioteche.get(chiave).codici.push(codice);
-  }
-
-  if (!biblioteche.size) {
-    statoMappa.textContent = "Non sono disponibili coordinate per le biblioteche.";
+  if (!codiciMappabili.length) {
+    statoMappa.textContent = "Non sono disponibili coordinate per i codici.";
     return;
   }
 
   try {
-    const mappa = L.map(contenitore, { scrollWheelZoom: false });
-    mappa.attributionControl.setPrefix('')
+    const mappa = L.map(contenitore, { scrollWheelZoom: true });
+    mappa.attributionControl.setPrefix("");
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mappa);
 
-    // Segnaposto a goccia, in blu notte, stile Google Maps.
-    // Il colore è gestito da --night nel CSS condiviso delle pagine interne.
-    const iconaBiblioteca = L.divIcon({
+    // Stessa icona blu notte già utilizzata per i marker singoli.
+    const iconaCodice = L.divIcon({
       className: "codici-map-pin",
       html: `<svg viewBox="0 0 36 48" width="36" height="48" aria-hidden="true" focusable="false">
         <path class="pin-shape" d="M18 1C8.6 1 1 8.6 1 18c0 12.5 17 28 17 28s17-15.5 17-28C35 8.6 27.4 1 18 1Z"/>
@@ -145,34 +221,54 @@ function mostraMappa(codici) {
       tooltipAnchor: [10, -17]
     });
 
+    // Ora il numero nei cluster indica quanti CODICI contengono.
+    const gruppoMarker = typeof L.markerClusterGroup === "function"
+      ? L.markerClusterGroup({
+          showCoverageOnHover: false,
+          zoomToBoundsOnClick: true,
+          spiderfyOnMaxZoom: true,
+          spiderfyDistanceMultiplier: 1.35,
+          maxClusterRadius: 60,
+          iconCreateFunction(cluster) {
+            const numeroCodici = cluster.getChildCount();
+            return L.divIcon({
+              html: `<span>${numeroCodici}</span>`,
+              className: "codici-cluster",
+              iconSize: [44, 44],
+              iconAnchor: [22, 22]
+            });
+          }
+        })
+      : L.layerGroup();
+
     const punti = [];
-    for (const biblioteca of biblioteche.values()) {
+    for (const codice of codiciMappabili) {
+      const posizione = codice.coordinate_biblioteca;
+      const coordinate = [posizione.lat, posizione.lng];
+
+      // Ogni popup descrive un solo codice e rimanda alla sua riga in tabella.
       const popup = document.createElement("div");
       const titolo = document.createElement("div");
       titolo.className = "map-popup-title";
-      titolo.textContent = biblioteca.nome;
+      const collegamento = document.createElement("a");
+      collegamento.href = `#${codice.id_tabella}`;
+      collegamento.textContent = codice.nome_codice;
+      collegamento.title = `Vai alla riga di ${codice.nome_codice}`;
+      titolo.appendChild(collegamento);
       popup.appendChild(titolo);
 
-      const elenco = document.createElement("ul");
-      elenco.className = "map-popup-list";
-      for (const codice of biblioteca.codici) {
-        const voce = document.createElement("li");
-        const collegamento = document.createElement("a");
-        collegamento.href = `#${codice.id_tabella}`;
-        collegamento.textContent = codice.nome_codice;
-        collegamento.title = `Vai alla riga di ${codice.nome_codice}`;
-        voce.appendChild(collegamento);
-        elenco.appendChild(voce);
-      }
-      popup.appendChild(elenco);
+      const biblioteca = document.createElement("div");
+      biblioteca.textContent = codice.biblioteca;
+      popup.appendChild(biblioteca);
 
-      const punto = L.marker(biblioteca.posizione, { icon: iconaBiblioteca });
+      const punto = L.marker(coordinate, { icon: iconaCodice });
       punto.bindPopup(popup, { maxWidth: 330, maxHeight: 245 });
-      punto.bindTooltip(biblioteca.nome);
-      punto.addTo(mappa);
-      punti.push(biblioteca.posizione);
+      punto.bindTooltip(`${codice.nome_codice} — ${codice.biblioteca}`);
+      gruppoMarker.addLayer(punto);
+      punti.push(coordinate);
     }
 
+    mappa.addLayer(gruppoMarker);
     mappa.fitBounds(L.latLngBounds(punti), {
       padding: [35, 35],
       maxZoom: 6
@@ -183,7 +279,6 @@ function mostraMappa(codici) {
     statoMappa.textContent = "Impossibile visualizzare la mappa in questo momento.";
   }
 }
-
 
 
 function vaiAlCodiceDaHash() {
@@ -197,6 +292,14 @@ function vaiAlCodiceDaHash() {
 
   const riga = document.getElementById(id);
   if (!riga) return;
+
+  // Se un filtro nasconde il codice selezionato dalla mappa o dall'URL,
+  // lo rende nuovamente visibile prima di scorrere.
+  if (riga.hidden) {
+    document.getElementById("ricerca-codici").value = "";
+    document.getElementById("filtro-risorsa").value = "tutte";
+    aggiornaCatalogo();
+  }
 
   // Evidenzia la riga selezionata.
   riga.classList.add("codice-evidenziato");
@@ -221,8 +324,18 @@ async function caricaCodici() {
     const codici = await risposta.json();
     if (!Array.isArray(codici)) throw new Error("Il file JSON non contiene un elenco valido.");
 
-    const recordValidi = mostraTabella(codici);
+    // I due codici modenesi restano nel JSON, ma non sono mostrati online.
+    const pubblicati = codici.filter(codice => codice.pubblica !== false);
+    const recordValidi = mostraTabella(
+      pubblicati.sort((a, b) => confrontaCodici(a, b, "nome"))
+    );
+    catalogoCodici = recordValidi;
     mostraMappa(recordValidi);
+
+    document.getElementById("ricerca-codici").addEventListener("input", aggiornaCatalogo);
+    document.getElementById("filtro-risorsa").addEventListener("change", aggiornaCatalogo);
+    document.getElementById("ordina-codici").addEventListener("change", aggiornaCatalogo);
+    aggiornaCatalogo();
 
     // Dopo aver generato la tabella, controlla l'URL.
     requestAnimationFrame(vaiAlCodiceDaHash);
