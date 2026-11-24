@@ -514,7 +514,10 @@
   {
     "nome_codice": "Add MS 21163",
     "biblioteca": "British Library, Londra",
-    "coordinate_biblioteca": null,
+    "coordinate_biblioteca": {
+      "lat": 51.524692,
+      "lng": -0.137
+    },
     "link": "https://searcharchives.bl.uk/catalog/032-002091537",
     "tipo_link": "scheda",
     "datazione": "XIV-XV secolo",
