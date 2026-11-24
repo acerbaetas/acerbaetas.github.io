@@ -188,7 +188,7 @@
                     <Unicode>In quel disio che li ponge el fianco</Unicode>
                 </TextEquiv>
             </TextLine>
-            <TextLine id="tr_1_tl_42" custom="readingOrder {index:25;} person {offset:28; length:4;wikiData:Q1398; firstname:Publio\u0020Virgilio\u0020Marone; dateOfDeath:-70; dateOfBirth:-19;}">
+            <TextLine id="tr_1_tl_42" custom="readingOrder {index:25;} person {offset:28; length:4;wikiData:Q1398; firstname:Publio\u0020Virgilio\u0020Marone; dateOfDeath:-19; dateOfBirth:-70;}">
                 <Coords points="444,1941 1304,1941 1304,2032 444,2032"/>
                 <Baseline points="444,2008 1304,2008"/>
                 <TextEquiv>
