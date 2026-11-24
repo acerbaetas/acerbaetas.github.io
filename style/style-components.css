@@ -117,22 +117,31 @@
   margin: 0.75rem 0 0;
 }
 
-.footer-github {
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.8rem;
+  padding: 0 1rem;
+}
+
+.footer-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.8rem;
   color: var(--gold);
   font-size: 0.8rem;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer-github:hover,
-.footer-github:focus-visible {
+.footer-link:hover,
+.footer-link:focus-visible {
   color: var(--white);
 }
 
-.footer-github i {
+.footer-link i {
   font-size: 1rem;
 }

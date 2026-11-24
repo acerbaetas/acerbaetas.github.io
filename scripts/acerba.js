@@ -220,6 +220,43 @@
       const span = el("span",active.map(a => `annotation-${a.type}`).join(" "),chars.slice(start,end).join(""));
       if (active.some(a => types[a.type])) span.classList.add("annotation-entity");
       span.title = active.map(a => types[a.type] || (a.type === "uncertain" ? "Lettura incerta" : "Lettura differente rispetto a Crespi")).join("; ");
+
+
+
+      if (active.some(a =>
+        ["uncertain", "differentReading"].includes(a.type)
+      )) {
+        const explanation = span.title;
+        span.removeAttribute("title");
+        span.tabIndex = 0;
+        span.setAttribute("role", "button");
+        span.setAttribute("aria-label", explanation);
+
+        span.addEventListener("click", event => {
+          event.stopPropagation();
+
+          const popover = bootstrap.Popover.getOrCreateInstance(span, {
+            content: explanation,
+            trigger: "focus",
+            placement: "top",
+            container: "body"
+          });
+
+          span.focus({ preventScroll: true });
+          popover.show();
+        });
+
+        span.addEventListener("keydown", event => {
+          if (["Enter", " "].includes(event.key)) {
+            event.preventDefault();
+            event.stopPropagation();
+            span.click();
+          }
+        });
+      }
+
+
+
       holder.append(span);
     }
     return holder;
@@ -439,10 +476,22 @@
       const at=current<0?0:current;
       card.append(el("div","entity-meta",types[entity.type]),el("h3","",entity.name));
       if (entity.description) card.append(el("p","",entity.description));
+      
       if (/^Q[1-9]\d*$/.test(entity.wikidata || "")) {
-        const link=el("a","",`Wikidata · ${entity.wikidata}`); link.href=`https://www.wikidata.org/wiki/${entity.wikidata}`;
-        link.target="_blank"; link.rel="noopener noreferrer"; link.addEventListener("click",e=>e.stopPropagation()); card.append(link);
+        const wiki = el("a", "", "Wikipedia");
+        wiki.href = `https://www.wikidata.org/wiki/Special:GoToLinkedPage/itwiki/${entity.wikidata}`;
+        const wd = el("a", "", "Wikidata");
+        wd.href = `https://www.wikidata.org/wiki/${entity.wikidata}`;
+        for (const link of [wiki, wd]) {
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.addEventListener("click", e => e.stopPropagation());
+        }
+        const links = el("div", "d-flex align-items-center gap-2");
+        links.append(wiki, document.createTextNode("·"), wd);
+        card.append(links);
       }
+
       const choose=i=>{panel.activeEntity=entity.id; navigate(entity.occurrences[i].ref);};
       card.tabIndex=0; card.setAttribute("role","button"); card.dataset.ref=entity.occurrences[at].ref;
       card.addEventListener("click",e=>{e.stopPropagation();choose(at);});

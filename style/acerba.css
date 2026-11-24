@@ -126,3 +126,7 @@ html:has(body.acerba-page) { overflow: visible; scrollbar-gutter: stable; }
   .acerba-page .panel-options { grid-template-columns: 1fr; grid-template-areas: "edition" "facsimiles" "transcripts" "tools"; }
   .acerba-page #add-modal .modal-body { max-height: 65vh; overflow: auto; }
 }
+.annotation-uncertain,
+.annotation-differentReading {
+  cursor: help;
+}
